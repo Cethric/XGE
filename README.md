@@ -8,7 +8,8 @@ I am in no way a great coder and any/all help and feedback is well appreciated
 * [NYI] Not Yet Implimented
 * [???] Still thinking about it
 * [COM] Completed
----
+
+###### Where I'm at
 + [COM] Initial design
 + [COM] OpenGL Version 4.1 Core support
 + [WIP] Scengraphish sort of design
@@ -19,7 +20,6 @@ I am in no way a great coder and any/all help and feedback is well appreciated
 + [NYI] Texture support
 + [???] Model import, mabey a completly seperate project?
 + [???] Documentation, most of my code is documented however there is no propper documentation yet.
----
 
 ###More Info
 I do not know where I am going with this project as of yet but I hope something great can come of it.
