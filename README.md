@@ -9,7 +9,7 @@ I am in no way a great coder and any/all help and feedback is well appreciated
 * [???] Still thinking about it
 * [COM] Completed
 
-###### Where I'm at
+#### Where I'm at
 + [COM] Initial design
 + [COM] OpenGL Version 4.1 Core support
 + [WIP] Scengraphish sort of design
