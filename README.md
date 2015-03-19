@@ -3,7 +3,7 @@ This is a experimental game engine written in java.
 It uses LWJGL v3 for the back end
 I am in no way a great coder and any/all help and feedback is well appreciated
 
-Things todo:
+###Things todo:
 * [WIP] Work in Progress
 * [NYI] Not Yet Implimented
 * [???] Still thinking about it
@@ -20,6 +20,8 @@ Things todo:
 + [???] Model import, mabey a completly seperate project?
 + [???] Documentation, most of my code is documented however there is no propper documentation yet.
 ---
+
+###More Info
 I do not know where I am going with this project as of yet but I hope something great can come of it.
 
 ~~For those who wish to run it, compile the code, and run ./src/com/cethric/xge/editor/Editor.class for an example on how to use the engine.~~
