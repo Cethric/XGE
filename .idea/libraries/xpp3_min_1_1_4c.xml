@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="xpp3_min-1.1.4c">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/org/xmlpull/xpp/3_min_1.1.4c/xpp3_min-1.1.4c.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

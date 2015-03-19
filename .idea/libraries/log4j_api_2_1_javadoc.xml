@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="log4j-api-2.1-javadoc">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-api-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-core-2.1-tests.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-core-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-flume-ng-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-iostreams-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-nosql-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-taglib-2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-api-2.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-core-2.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-flume-ng-2.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-iostreams-2.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-nosql-2.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-taglib-2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-api-2.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-core-2.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-core-2.1-tests.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-flume-ng-2.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-iostreams-2.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-nosql-2.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org/apache/logging/log4j/2.1/log4j-taglib-2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
