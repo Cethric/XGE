@@ -5,7 +5,10 @@ import cethric.xge.engine.scene.Scene;
 import cethric.xge.engine.scene.SceneManager;
 import cethric.xge.engine.scene.object.Object;
 import cethric.xge.engine.scene.object.camera.Camera;
+import cethric.xge.engine.scene.object.mesh.Cube;
+import cethric.xge.engine.scene.object.mesh.MeshManager;
 import cethric.xge.util.XGEUtil;
+import com.bulletphysics.linearmath.QuaternionUtil;
 import com.hackoeur.jglm.Vec3;
 import com.thoughtworks.xstream.XStream;
 import org.apache.logging.log4j.LogManager;
@@ -82,12 +85,38 @@ public class Editor {
         sceneManager.addScene(scene);
         scene.active(true);
         Quat4f quat4f = new Quat4f(0, 0, 0, 1);
-//        QuaternionUtil.setEuler(quat4f, 10, 10, 20);
+        QuaternionUtil.setEuler(quat4f, 10, 10, 20);
 
-        scene.addObject(new Object(new Vector3f(10, 10, 0), quat4f));
-        scene.addObject(new Object(new Vector3f(10, 10, 10), quat4f));
-        scene.addObject(new Object(new Vector3f(-10, 10, 0), quat4f));
-        scene.addObject(new Object(new Vector3f(-10, 10, -10), quat4f));
+        Object object1 = new Object(new Vector3f(10, 20, 0), quat4f);
+        MeshManager meshManager1 = new MeshManager();
+        meshManager1.addMesh(new Cube());
+        object1.setMeshManager(meshManager1);
+
+        Object object2 = new Object(new Vector3f(10, 20, 10), quat4f);
+        MeshManager meshManager2 = new MeshManager();
+        meshManager2.addMesh(new Cube());
+        object2.setMeshManager(meshManager2);
+
+        Object object3 = new Object(new Vector3f(-10, 20, 10), quat4f);
+        MeshManager meshManager3 = new MeshManager();
+        meshManager3.addMesh(new Cube());
+        object3.setMeshManager(meshManager3);
+
+        Object object4 = new Object(new Vector3f(10, 20, -10), quat4f);
+        MeshManager meshManager4 = new MeshManager();
+        meshManager4.addMesh(new Cube());
+        object4.setMeshManager(meshManager4);
+
+        Object object5 = new Object(new Vector3f(10, 30, 10), quat4f);
+        MeshManager meshManager5 = new MeshManager();
+        meshManager5.addMesh(new Cube());
+        object5.setMeshManager(meshManager5);
+
+        scene.addObject(object1);
+        scene.addObject(object2);
+        scene.addObject(object3);
+        scene.addObject(object4);
+        scene.addObject(object5);
 
         Camera camera = new Camera(new Vec3(0, 16, 0), new Vec3(0, 1, 0), 0, 0);
         camera.setActive(true);
