@@ -2,26 +2,23 @@ package cethric.xge.engine.scene.object.mesh.loader;
 
 import cethric.xge.engine.scene.object.mesh.Mesh;
 import cethric.xge.engine.scene.object.mesh.MeshManager;
+import cethric.xge.engine.scene.object.texture.Texture;
 import cethric.xge.engine.scene.shader.ShaderProgram;
 import com.hackoeur.jglm.Mat4;
 import jassimp.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
+import java.util.List;
 import java.util.Random;
 
-import static org.lwjgl.opengl.GL11.GL_FLOAT;
-import static org.lwjgl.opengl.GL11.GL_TRIANGLES;
-import static org.lwjgl.opengl.GL11.glDrawArrays;
+import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL15.*;
-import static org.lwjgl.opengl.GL15.GL_ARRAY_BUFFER;
-import static org.lwjgl.opengl.GL15.GL_STATIC_DRAW;
-import static org.lwjgl.opengl.GL20.glDisableVertexAttribArray;
-import static org.lwjgl.opengl.GL20.glEnableVertexAttribArray;
-import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
+import static org.lwjgl.opengl.GL20.*;
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
 import static org.lwjgl.opengl.GL30.glGenVertexArrays;
 
@@ -37,6 +34,7 @@ public class JassimpLoader {
         MeshManager meshManager = new MeshManager();
         try {
             AiScene aiScene = Jassimp.importFile(filePath);
+            List<AiMaterial> materials = aiScene.getMaterials();
             System.out.println(aiScene.getNumMeshes());
             for (AiMesh mesh : aiScene.getMeshes()) {
                 if (mesh.isPureTriangle()) {
@@ -63,6 +61,13 @@ public class JassimpLoader {
                     }
                     g_vertex_buffer_data.rewind();
                     g_color_buffer_data.rewind();
+
+                    AiMaterial material = materials.get(mesh.getMaterialIndex());
+
+                    System.out.println("Loading texture");
+                    String name = material.getTextureFile(AiTextureType.DIFFUSE, 0);
+                    File source = new File(name);
+                    final Texture texture = new Texture(source);
 
                     Mesh fMesh = new Mesh() {
                         int vertexbuffer;
@@ -109,10 +114,14 @@ public class JassimpLoader {
                             );
 
                             // Draw the triangle !
+                            texture.bind();
+
                             glDrawArrays(GL_TRIANGLES, 0, size / 3); // 3 indices starting at 0 -> 1 triangle
 
                             glDisableVertexAttribArray(0);
                             glDisableVertexAttribArray(1);
+
+                            texture.unbind();
                         }
 
                         /**
