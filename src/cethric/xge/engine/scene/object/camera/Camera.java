@@ -44,7 +44,6 @@ public class Camera implements ICamera {
 
     public Camera(Vec3 position, Vec3 up, float yaw, float pitch) {
         float mass = 100f;
-//        collisionShape = new BoxShape(new Vector3f(1, 1, 1));
         collisionShape = new CapsuleShape(0.5f, 2f);
         Quat4f rotation = new Quat4f();
         QuaternionUtil.setEuler(rotation, -(float)Math.toRadians(yaw), (float)Math.toRadians(pitch), 0);
