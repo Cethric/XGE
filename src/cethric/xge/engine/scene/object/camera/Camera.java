@@ -1,8 +1,8 @@
 package cethric.xge.engine.scene.object.camera;
 
 import cethric.xge.util.GameConfig;
-import com.bulletphysics.collision.shapes.BoxShape;
-import com.bulletphysics.collision.shapes.CollisionShape;
+import com.bulletphysics.collision.dispatch.CollisionObject;
+import com.bulletphysics.collision.shapes.CapsuleShape;
 import com.bulletphysics.dynamics.RigidBody;
 import com.bulletphysics.dynamics.RigidBodyConstructionInfo;
 import com.bulletphysics.linearmath.DefaultMotionState;
@@ -33,17 +33,18 @@ public class Camera implements ICamera {
     private Vec3 worldUp;
     private float yaw;
     private float pitch;
-    private float movementSpeed = 0.1f;
+    private float movementSpeed = 0.01f;
     private float mouseSensitivity = 0.05f;
     private int[] strafe = new int[] {0, 0};
 
     // Physics Stuff
     private RigidBody rigidBody;
-    private CollisionShape collisionShape;
+    private CapsuleShape collisionShape;
 
 
     public Camera(Vec3 position, Vec3 up, float yaw, float pitch) {
-        collisionShape = new BoxShape(new Vector3f(1, 1, 1));
+//        collisionShape = new BoxShape(new Vector3f(1, 1, 1));
+        collisionShape = new CapsuleShape(0.5f, 2f);
         Quat4f rotation = new Quat4f();
         QuaternionUtil.setEuler(rotation, -(float)Math.toRadians(yaw), (float)Math.toRadians(pitch), 0);
         DefaultMotionState motionState = new DefaultMotionState(new Transform(new Matrix4f(rotation, new Vector3f(position.getX(), position.getY(), position.getZ()), 1)));
@@ -51,6 +52,7 @@ public class Camera implements ICamera {
         collisionShape.calculateLocalInertia(10f, inertia);
         RigidBodyConstructionInfo rigidBodyCI = new RigidBodyConstructionInfo(10f, motionState, collisionShape);
         rigidBody = new RigidBody(rigidBodyCI);
+        rigidBody.setActivationState(CollisionObject.DISABLE_DEACTIVATION);
 
         front = new Vec3(0, 0, -1);
         this.position = position;
