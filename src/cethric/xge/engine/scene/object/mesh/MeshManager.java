@@ -82,7 +82,7 @@ public class MeshManager implements IMeshManager {
             return;
         } else {
             for (Mesh mesh : meshs) {
-                LOGGER.debug(String.format("Rendering: %s", mesh.getName()));
+//                LOGGER.debug(String.format("Rendering: %s", mesh.getName()));
                 mesh.render(V, P, shaderProgram);
             }
         }

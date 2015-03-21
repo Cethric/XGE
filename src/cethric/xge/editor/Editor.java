@@ -89,8 +89,9 @@ public class Editor {
         Scene scene = new Scene();
         sceneManager.addScene(scene);
         scene.active(true);
-        Quat4f quat4f = new Quat4f(0, 0, 0, 1);
+        Quat4f quat4f = new Quat4f();
         QuaternionUtil.setEuler(quat4f, 10, 10, 20);
+        quat4f.normalize();
 
         Object object1 = new Object(new Vector3f(10, 20, 0), quat4f);
         MeshManager meshManager1 = new MeshManager();

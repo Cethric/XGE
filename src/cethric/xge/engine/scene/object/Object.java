@@ -40,9 +40,9 @@ public class Object implements IRenderable {
         collisionShape = new BoxShape(new Vector3f(1, 1, 1));
 
         DefaultMotionState motionState = new DefaultMotionState(new Transform(new Matrix4f(rotation, position, 1)));
-        Vector3f inertia = new Vector3f(0, 0, 0);
+        Vector3f inertia = new Vector3f();
         collisionShape.calculateLocalInertia(10f, inertia);
-        RigidBodyConstructionInfo rigidBodyCI = new RigidBodyConstructionInfo(10f, motionState, collisionShape);
+        RigidBodyConstructionInfo rigidBodyCI = new RigidBodyConstructionInfo(10f, motionState, collisionShape, inertia);
         rigidBody = new RigidBody(rigidBodyCI);
         objectCount++;
 

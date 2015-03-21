@@ -43,14 +43,15 @@ public class Camera implements ICamera {
 
 
     public Camera(Vec3 position, Vec3 up, float yaw, float pitch) {
+        float mass = 100f;
 //        collisionShape = new BoxShape(new Vector3f(1, 1, 1));
         collisionShape = new CapsuleShape(0.5f, 2f);
         Quat4f rotation = new Quat4f();
         QuaternionUtil.setEuler(rotation, -(float)Math.toRadians(yaw), (float)Math.toRadians(pitch), 0);
         DefaultMotionState motionState = new DefaultMotionState(new Transform(new Matrix4f(rotation, new Vector3f(position.getX(), position.getY(), position.getZ()), 1)));
         Vector3f inertia = new Vector3f(0, 0, 0);
-        collisionShape.calculateLocalInertia(10f, inertia);
-        RigidBodyConstructionInfo rigidBodyCI = new RigidBodyConstructionInfo(10f, motionState, collisionShape);
+        collisionShape.calculateLocalInertia(mass, inertia);
+        RigidBodyConstructionInfo rigidBodyCI = new RigidBodyConstructionInfo(mass, motionState, collisionShape, inertia);
         rigidBody = new RigidBody(rigidBodyCI);
         rigidBody.setActivationState(CollisionObject.DISABLE_DEACTIVATION);
 
