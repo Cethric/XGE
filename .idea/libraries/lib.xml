@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jassimp/jassimp.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/lib/jassimp/lib" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib/jassimp/jassimp/src" />
+    </SOURCES>
+  </library>
+</component>

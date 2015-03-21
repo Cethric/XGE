@@ -55,7 +55,7 @@ public class Scene implements IScene {
     // Scene Contents
     private List<Object> objects = new ArrayList<Object>();
     private List<Camera> cameras = new ArrayList<Camera>();
-    private Mat4 Projection = Matrices.perspective(45.0f, 3.0f / 3.0f, 0.1f, 100.0f),
+    private Mat4 Projection = Matrices.perspective(45.0f, 3.0f / 3.0f, 0.1f, 1000.0f),
             View = Matrices.lookAt(
                     new Vec3(1, 50, 1), // Camera is at (4,3,3), in World Space
                     new Vec3(0, 0,0), // and looks at the origin
@@ -103,7 +103,7 @@ public class Scene implements IScene {
     @Override
     public void update(long delta) {
         sceneManager.update(delta);
-        dynamicsWorld.stepSimulation((float)delta / 1000);
+        dynamicsWorld.stepSimulation((float)delta, 10);
         for (Object object : objects) {
             object.update(delta);
         }

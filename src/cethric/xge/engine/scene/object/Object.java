@@ -37,7 +37,7 @@ public class Object implements IRenderable {
     private MeshManager meshManager;
 
     public Object(Vector3f position, Quat4f rotation) {
-        collisionShape = new BoxShape(new Vector3f(1, 1, 1));
+        collisionShape = new BoxShape(new Vector3f(50, 50, 50));
 
         DefaultMotionState motionState = new DefaultMotionState(new Transform(new Matrix4f(rotation, position, 1)));
         Vector3f inertia = new Vector3f();

@@ -7,8 +7,8 @@ import cethric.xge.engine.scene.object.Object;
 import cethric.xge.engine.scene.object.camera.Camera;
 import cethric.xge.engine.scene.object.mesh.Cube;
 import cethric.xge.engine.scene.object.mesh.MeshManager;
+import cethric.xge.engine.scene.object.mesh.loader.JassimpLoader;
 import cethric.xge.util.XGEUtil;
-import com.bulletphysics.linearmath.QuaternionUtil;
 import com.hackoeur.jglm.Vec3;
 import com.thoughtworks.xstream.XStream;
 import org.apache.logging.log4j.LogManager;
@@ -36,11 +36,6 @@ import static org.lwjgl.glfw.GLFW.glfwInit;
  */
 public class Editor {
     private static final Logger LOGGER = LogManager.getLogger(Editor.class);
-
-    static {
-        System.setProperty("-XstartOnFirstThread", "true");
-        System.setProperty("java.library.path", "/Users/blakerogan/Desktop/XGE/lib/org/lwjgl/3.0.0a/native");
-    }
 
     public Editor() {
     }
@@ -83,6 +78,10 @@ public class Editor {
         LOGGER.debug("Running XGE Engine Version: " + XGEUtil.getEditorVersionString());
         LOGGER.info("Starting XGE Editor");
 
+        LOGGER.info("Checking Assimp");
+        JassimpLoader jassimpLoader = new JassimpLoader();
+        LOGGER.info("Assimp was checked");
+
         Window window = new Window();
 
         SceneManager sceneManager = new SceneManager();
@@ -90,30 +89,30 @@ public class Editor {
         sceneManager.addScene(scene);
         scene.active(true);
         Quat4f quat4f = new Quat4f();
-        QuaternionUtil.setEuler(quat4f, 10, 10, 20);
-        quat4f.normalize();
+//        QuaternionUtil.setEuler(quat4f, 10, 10, 20);
+//        quat4f.normalize();
 
-        Object object1 = new Object(new Vector3f(10, 20, 0), quat4f);
-        MeshManager meshManager1 = new MeshManager();
-        meshManager1.addMesh(new Cube());
-        object1.setMeshManager(meshManager1);
+        float n = 120f;
 
-        Object object2 = new Object(new Vector3f(10, 20, 10), quat4f);
+        Object object1 = new Object(new Vector3f(n, 50, 0), quat4f);
+        object1.setMeshManager(jassimpLoader.loadMesh("../mesh_hbSignPost.fbx"));
+
+        Object object2 = new Object(new Vector3f(n, 50, n), quat4f);
         MeshManager meshManager2 = new MeshManager();
         meshManager2.addMesh(new Cube());
         object2.setMeshManager(meshManager2);
 
-        Object object3 = new Object(new Vector3f(-10, 20, 10), quat4f);
+        Object object3 = new Object(new Vector3f(-n, 50, n), quat4f);
         MeshManager meshManager3 = new MeshManager();
         meshManager3.addMesh(new Cube());
         object3.setMeshManager(meshManager3);
 
-        Object object4 = new Object(new Vector3f(10, 20, -10), quat4f);
+        Object object4 = new Object(new Vector3f(n, 50, -n), quat4f);
         MeshManager meshManager4 = new MeshManager();
         meshManager4.addMesh(new Cube());
         object4.setMeshManager(meshManager4);
 
-        Object object5 = new Object(new Vector3f(10, 30, 10), quat4f);
+        Object object5 = new Object(new Vector3f(n, 100, n), quat4f);
         MeshManager meshManager5 = new MeshManager();
         meshManager5.addMesh(new Cube());
         object5.setMeshManager(meshManager5);
@@ -124,7 +123,7 @@ public class Editor {
         scene.addObject(object4);
         scene.addObject(object5);
 
-        Camera camera = new Camera(new Vec3(0, 16, 0), new Vec3(0, 1, 0), 0, 0);
+        Camera camera = new Camera(new Vec3(0, 180, 0), new Vec3(0, 1, 0), 0, 0);
         camera.setActive(true);
         scene.addCamera(camera);
 
