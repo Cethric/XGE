@@ -18,7 +18,7 @@ I am in no way a great coder and any/all help and feedback is well appreciated
 + [WIP] Shader support
 + [NYI] Lighting
 + [WIP] Texture support
-+ [???] Model import, maybe a completely separate project?
++ [WIP] ~~Model import, maybe a completely separate project?~~ Using jAssimp to manage this.
 + [???] Documentation, most of my code is documented however there is no proper documentation yet.
 
 ###More Info
