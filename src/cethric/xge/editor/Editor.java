@@ -37,6 +37,11 @@ import static org.lwjgl.glfw.GLFW.glfwInit;
 public class Editor {
     private static final Logger LOGGER = LogManager.getLogger(Editor.class);
 
+    static {
+        System.setProperty("-XstartOnFirstThread", "true");
+        System.setProperty("java.library.path", "/Users/blakerogan/Desktop/XGE/lib/org/lwjgl/3.0.0a/native");
+    }
+
     public Editor() {
     }
 

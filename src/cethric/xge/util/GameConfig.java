@@ -11,4 +11,6 @@ public class GameConfig {
     public static final int[] RIGHT_KEY = new int[] {68, 0};
 
     public static final int[] GAME_PAUSE_CANCEL_KEY = new int[] {256,0};
+
+
 }
