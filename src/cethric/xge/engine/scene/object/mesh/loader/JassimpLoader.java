@@ -41,6 +41,7 @@ public class JassimpLoader {
                     final int size = mesh.getNumVertices() * 3;
                     final FloatBuffer g_vertex_buffer_data = ByteBuffer.allocateDirect(size * Float.BYTES).order(ByteOrder.nativeOrder()).asFloatBuffer();
                     final FloatBuffer g_color_buffer_data = ByteBuffer.allocateDirect(size * Float.BYTES).order(ByteOrder.nativeOrder()).asFloatBuffer();
+                    final FloatBuffer g_uv_buffer_data = ByteBuffer.allocateDirect(size * Float.BYTES).order(ByteOrder.nativeOrder()).asFloatBuffer();
                     System.out.println("mesh can be used");
                     System.out.println(mesh.toString());
                     IntBuffer index = mesh.getIndexBuffer();
@@ -48,6 +49,7 @@ public class JassimpLoader {
                     for (int i = 0; i < length; i++) {
                         AiWrapperProvider wrapperProvider = Jassimp.getWrapperProvider();
                         AiVector vector = (AiVector) mesh.getWrappedPosition(i, wrapperProvider);
+                        AiVector uvw = (AiVector) mesh.getWrappedTexCoords(i, 0, wrapperProvider);
                         g_vertex_buffer_data.put(vector.getX());
                         g_vertex_buffer_data.put(vector.getY());
                         g_vertex_buffer_data.put(vector.getZ());
@@ -56,11 +58,16 @@ public class JassimpLoader {
                         g_color_buffer_data.put(new Random().nextFloat());
                         g_color_buffer_data.put(new Random().nextFloat());
 
+                        g_uv_buffer_data.put(uvw.getX());
+                        g_uv_buffer_data.put(uvw.getY());
+                        g_uv_buffer_data.put(uvw.getZ());
+
                         System.out.println(vector);
                         System.out.println(mesh.getWrappedNormal(i, wrapperProvider));
                     }
                     g_vertex_buffer_data.rewind();
                     g_color_buffer_data.rewind();
+                    g_uv_buffer_data.rewind();
 
                     AiMaterial material = materials.get(mesh.getMaterialIndex());
 

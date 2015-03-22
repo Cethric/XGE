@@ -10,7 +10,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL13.glActiveTexture;
@@ -42,7 +41,7 @@ public class Texture {
             File sour = new File(source.getAbsolutePath().replace("\\", "/").replace(".tif", ".png").replace("tex", "mat").replace("_diff", "_D"));
             InputStream inputStream = new FileInputStream(sour);
             PNGDecoder decoder = new PNGDecoder(inputStream);
-            ByteBuffer buffer = ByteBuffer.allocateDirect(4 * decoder.getWidth() * decoder.getHeight()).order(ByteOrder.nativeOrder());
+            ByteBuffer buffer = ByteBuffer.allocateDirect(4 * decoder.getWidth() * decoder.getHeight()); //.order(ByteOrder.nativeOrder());
             decoder.decode(buffer, decoder.getWidth() * 4, PNGDecoder.Format.RGBA);
             buffer.flip();
 
