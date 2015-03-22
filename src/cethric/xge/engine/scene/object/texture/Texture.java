@@ -1,15 +1,14 @@
 package cethric.xge.engine.scene.object.texture;
 
+import de.matthiasmann.twl.utils.PNGDecoder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.IOException;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
@@ -40,31 +39,27 @@ public class Texture {
     public void init() {
         textureID = glGenTextures();
         try {
-            LOGGER.debug("Loading Texture: " + source.getAbsolutePath());
-            LOGGER.debug("File status (true exists else not there: " + source.exists());
-            BufferedImage image = ImageIO.read(source);
-            LOGGER.debug("Image loaded adding to memory");
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            ImageIO.write(image, "png", byteArrayOutputStream);
-            byte[] imagearray = byteArrayOutputStream.toByteArray();
-            ByteBuffer buffer = ByteBuffer.allocateDirect(imagearray.length * Byte.BYTES).order(ByteOrder.nativeOrder());
-            buffer.put(imagearray);
-            buffer.rewind();
-            LOGGER.debug("texture loaded into memory");
+            File sour = new File(source.getAbsolutePath().replace("\\", "/").replace(".tif", ".png").replace("tex", "mat").replace("_diff", "_D"));
+            InputStream inputStream = new FileInputStream(sour);
+            PNGDecoder decoder = new PNGDecoder(inputStream);
+            ByteBuffer buffer = ByteBuffer.allocateDirect(4 * decoder.getWidth() * decoder.getHeight()).order(ByteOrder.nativeOrder());
+            decoder.decode(buffer, decoder.getWidth() * 4, PNGDecoder.Format.RGBA);
+            buffer.flip();
 
             glEnable(textureTarget);
             glActiveTexture(activeTexture);
             glBindTexture(textureTarget, textureID);
 
-            glTexParameteri(textureTarget, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-            glTexParameteri(textureTarget, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+            glTexParameteri(textureTarget, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            glTexParameteri(textureTarget, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 
             glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
-            glTexImage2D(textureTarget, 0, GL_RGBA, image.getWidth(), image.getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+            glTexImage2D(textureTarget, 0, GL_RGBA, decoder.getWidth(), decoder.getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+            glBindTexture(textureTarget, 0);
             LOGGER.debug("Texture Loaded");
 
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            LOGGER.error(e.getLocalizedMessage(), e);
         }
 
     }
