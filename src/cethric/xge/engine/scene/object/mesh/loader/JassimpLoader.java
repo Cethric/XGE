@@ -13,6 +13,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -42,6 +43,7 @@ public class JassimpLoader {
                     final FloatBuffer g_vertex_buffer_data = ByteBuffer.allocateDirect(size * Float.BYTES).order(ByteOrder.nativeOrder()).asFloatBuffer();
                     final FloatBuffer g_color_buffer_data = ByteBuffer.allocateDirect(size * Float.BYTES).order(ByteOrder.nativeOrder()).asFloatBuffer();
                     final FloatBuffer g_uv_buffer_data = ByteBuffer.allocateDirect(size * Float.BYTES).order(ByteOrder.nativeOrder()).asFloatBuffer();
+                    List<Float> uv_data = new ArrayList<Float>();
                     System.out.println("mesh can be used");
                     System.out.println(mesh.toString());
                     IntBuffer index = mesh.getIndexBuffer();
@@ -50,6 +52,7 @@ public class JassimpLoader {
                         AiWrapperProvider wrapperProvider = Jassimp.getWrapperProvider();
                         AiVector vector = (AiVector) mesh.getWrappedPosition(i, wrapperProvider);
                         AiVector uvw = (AiVector) mesh.getWrappedTexCoords(i, 0, wrapperProvider);
+
                         g_vertex_buffer_data.put(vector.getX());
                         g_vertex_buffer_data.put(vector.getY());
                         g_vertex_buffer_data.put(vector.getZ());
@@ -58,13 +61,16 @@ public class JassimpLoader {
                         g_color_buffer_data.put(new Random().nextFloat());
                         g_color_buffer_data.put(new Random().nextFloat());
 
-                        g_uv_buffer_data.put(uvw.getX());
-                        g_uv_buffer_data.put(uvw.getY());
-                        g_uv_buffer_data.put(uvw.getZ());
-
-                        System.out.println(vector);
-                        System.out.println(mesh.getWrappedNormal(i, wrapperProvider));
+                        if (uvw.getNumComponents() >= 2){
+                            try {
+                                uv_data.add(uvw.getX());
+                                uv_data.add(uvw.getY());
+                            } catch (IndexOutOfBoundsException e) {
+                                e.printStackTrace();
+                            }
+                        }
                     }
+                    System.out.println(uv_data.size());
                     g_vertex_buffer_data.rewind();
                     g_color_buffer_data.rewind();
                     g_uv_buffer_data.rewind();
@@ -98,6 +104,7 @@ public class JassimpLoader {
                          */
                         @Override
                         public void render(Mat4 V, Mat4 P, ShaderProgram shaderProgram) {
+                            System.out.println("Render");
                             glEnableVertexAttribArray(0);
                             glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
                             glVertexAttribPointer(
