@@ -38,7 +38,7 @@ public class Texture {
     public void init() {
         textureID = glGenTextures();
         try {
-            File sour = new File(source.getAbsolutePath().replace("\\", "/").replace(".tif", ".png").replace("tex", "mat").replace("_diff", "_D"));
+            File sour = new File(source.getAbsolutePath().replace("\\", "/").replace(".tif", ".png").replace("../maProj_ssAssets/sourceimages/fish/", "../tuna/"));
             InputStream inputStream = new FileInputStream(sour);
             PNGDecoder decoder = new PNGDecoder(inputStream);
             ByteBuffer buffer = ByteBuffer.allocateDirect(4 * decoder.getWidth() * decoder.getHeight()); //.order(ByteOrder.nativeOrder());

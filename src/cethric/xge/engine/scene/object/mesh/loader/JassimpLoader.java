@@ -52,7 +52,7 @@ public class JassimpLoader {
                         AiVector vector = (AiVector) mesh.getWrappedPosition(i, wrapperProvider);
                         for (int x=0; x < 10; x++) {
                             try {
-                                AiVector uvw = (AiVector) mesh.getWrappedTexCoords(i, x, wrapperProvider);
+                                AiVector uvw = (AiVector) mesh.getWrappedTexCoords(x, i, wrapperProvider);
                                 if (uvw.getNumComponents() >= 2) {
                                     try {
                                         uv_data.add(uvw.getX());

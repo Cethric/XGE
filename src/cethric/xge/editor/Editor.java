@@ -95,7 +95,7 @@ public class Editor {
         float n = 120f;
 
         Object object1 = new Object(new Vector3f(n, 50, 0), quat4f);
-        object1.setMeshManager(jassimpLoader.loadMesh("../mesh_hbSignPost.fbx"));
+        object1.setMeshManager(jassimpLoader.loadMesh("../tuna/m_tuna.fbx"));
 
         Object object2 = new Object(new Vector3f(n, 50, n), quat4f);
         MeshManager meshManager2 = new MeshManager();
