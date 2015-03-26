@@ -1,0 +1,10 @@
+cethric.xge.editor
+cethric.xge.engine
+cethric.xge.engine.scene
+cethric.xge.engine.scene.object
+cethric.xge.engine.scene.object.camera
+cethric.xge.engine.scene.object.mesh
+cethric.xge.engine.scene.object.mesh.loader
+cethric.xge.engine.scene.object.texture
+cethric.xge.engine.scene.shader
+cethric.xge.util
