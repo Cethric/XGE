@@ -15,7 +15,6 @@
       <element id="library" level="project" name="lwjgl" />
       <element id="library" level="project" name="xmlpull-1.1.3.1" />
       <element id="library" level="project" name="xpp3_min-1.1.4c" />
-      <element id="library" level="project" name="net.sf.json-lib:json-lib:2.3" />
     </root>
   </artifact>
 </component>
