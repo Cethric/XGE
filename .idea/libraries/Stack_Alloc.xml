@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="stack-alloc-3.0.0.20130526">
+  <library name="Stack-Alloc">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/cz/advel/stack/3.0.0.20130526/stack-alloc-3.0.0.20130526.jar!/" />
     </CLASSES>

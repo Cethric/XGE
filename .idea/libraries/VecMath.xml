@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="vecmath-3.0.0.20130526">
+  <library name="VecMath">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/javax/vecmath/3.0.0.20130526/vecmath-3.0.0.20130526.jar!/" />
     </CLASSES>

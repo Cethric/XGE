@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="jbullet-3.0.0.20130526">
+  <library name="jBullet">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/com/bulletphysics/3.0.0.20130526/jbullet-3.0.0.20130526.jar!/" />
     </CLASSES>

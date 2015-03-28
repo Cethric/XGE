@@ -1,9 +1,11 @@
 <component name="libraryTable">
-  <library name="jglm-1.0.0-javadoc">
+  <library name="JGML">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/com/hackoeur/jglm/1.0.0/jglm-1.0.0.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/com/hackoeur/jglm/1.0.0/jglm-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/lib/com/hackoeur/jglm/1.0.0/jglm-1.0.0-sources.jar!/" />
     </SOURCES>
