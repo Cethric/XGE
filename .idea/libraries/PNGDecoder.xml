@@ -4,8 +4,6 @@
       <root url="jar://$PROJECT_DIR$/lib/de/matthiasmann/twl/utils/PNGDecoder.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="file://$PROJECT_DIR$/lib/de/matthiasmann/twl/utils/source" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
