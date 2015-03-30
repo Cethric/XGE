@@ -78,10 +78,6 @@ public class Editor {
         LOGGER.debug("Running XGE Engine Version: " + XGEUtil.getEditorVersionString());
         LOGGER.info("Starting XGE Editor");
 
-        LOGGER.info("Checking Assimp");
-        JassimpLoader jassimpLoader = new JassimpLoader();
-        LOGGER.info("Assimp was checked");
-
         Window window = new Window();
 
         SceneManager sceneManager = new SceneManager();
@@ -95,7 +91,7 @@ public class Editor {
         float n = 120f;
 
         Object object1 = new Object(new Vector3f(n, 50, 0), quat4f);
-        object1.setMeshManager(jassimpLoader.loadMesh("../tuna/m_tuna.fbx"));
+        object1.setMeshManager(JassimpLoader.loadMesh("../tuna/m_tuna.fbx"));
 
         Object object2 = new Object(new Vector3f(n, 50, n), quat4f);
         MeshManager meshManager2 = new MeshManager();
