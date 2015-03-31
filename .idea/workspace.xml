@@ -26,10 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53202fef-2cdd-495e-bf3c-94cd3f4e7a3f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader$1.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/editor/Editor.java" afterPath="$PROJECT_DIR$/src/cethric/xge/editor/Editor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="XGE.iws" />
@@ -55,25 +53,27 @@
       <file leaf-file-name="JassimpLoader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45842695">
-              <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.53571427">
+              <caret line="129" column="68" selection-start-line="129" selection-start-column="68" selection-end-line="129" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1885#1892#0" expanded="true" />
-                <element signature="method#update#0;class#5081:9940" expanded="false" />
-                <element signature="method#setup#0;class#5081:9940" expanded="false" />
-                <element signature="method#teardown#0;class#5081:9940" expanded="false" />
+                <element signature="method#update#0;class#5082:10010" expanded="false" />
+                <element signature="method#setup#0;class#5082:10010" expanded="false" />
+                <element signature="method#teardown#0;class#5082:10010" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AiMesh.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/jassimp/jassimp.jar!/jassimp/AiMesh.class">
+      <file leaf-file-name="Texture.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="65" column="27" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="27" />
+              <folding>
+                <element signature="e#2322#2323#0" expanded="true" />
+                <element signature="e#2359#2360#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,6 +108,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/Window.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Editor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cethric/xge/editor/Editor.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -133,6 +143,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/editor/Editor.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java" />
       </list>
     </option>
@@ -155,7 +166,7 @@
     <option name="x" value="1366" />
     <option name="y" value="23" />
     <option name="width" value="1600" />
-    <option name="height" value="873" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -180,9 +191,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -794,8 +805,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="23" width="1600" height="873" extended-state="6" />
-    <editor active="false" />
+    <frame x="1366" y="23" width="1600" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -815,7 +826,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.203125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39203084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39130434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -850,10 +861,62 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1885#1892#0" expanded="true" />
-            <element signature="method#update#0;class#5081:9940" expanded="false" />
-            <element signature="method#setup#0;class#5081:9940" expanded="false" />
-            <element signature="method#teardown#0;class#5081:9940" expanded="false" />
+            <element signature="method#update#0;class#5082:10010" expanded="false" />
+            <element signature="method#setup#0;class#5082:10010" expanded="false" />
+            <element signature="method#teardown#0;class#5082:10010" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jassimp/jassimp.jar!/jassimp/AiMesh.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/jassimp/jassimp/src/jassimp/AiMesh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1028" column="32" selection-start-line="1028" selection-start-column="32" selection-end-line="1028" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/jassimp/jassimp/src/jassimp/AiMaterial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="893" column="15" selection-start-line="893" selection-start-column="15" selection-end-line="893" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="194" column="31" selection-start-line="194" selection-start-column="31" selection-end-line="194" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/editor/Editor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#update#0;class#5082:10010" expanded="false" />
+            <element signature="method#setup#0;class#5082:10010" expanded="false" />
+            <element signature="method#teardown#0;class#5082:10010" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -877,19 +940,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="194" column="31" selection-start-line="194" selection-start-column="31" selection-end-line="194" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/jassimp/jassimp/src/jassimp/AiTextureType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.0898876">
           <caret line="62" column="3" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -897,11 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="113" column="28" selection-start-line="113" selection-start-column="28" selection-end-line="113" selection-end-column="28" />
-          <folding>
-            <element signature="e#3793#3794#0" expanded="false" />
-            <element signature="e#3827#3828#0" expanded="false" />
-            <element signature="e#6455#6467#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -941,20 +990,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53483146">
           <caret line="90" column="7" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="194" column="31" selection-start-line="194" selection-start-column="31" selection-end-line="194" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="27" />
+          <folding>
+            <element signature="e#2322#2323#0" expanded="true" />
+            <element signature="e#2359#2360#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45842695">
-          <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.53571427">
+          <caret line="129" column="68" selection-start-line="129" selection-start-column="68" selection-end-line="129" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1885#1892#0" expanded="true" />
-            <element signature="method#update#0;class#5081:9940" expanded="false" />
-            <element signature="method#setup#0;class#5081:9940" expanded="false" />
-            <element signature="method#teardown#0;class#5081:9940" expanded="false" />
+            <element signature="method#update#0;class#5082:10010" expanded="false" />
+            <element signature="method#setup#0;class#5082:10010" expanded="false" />
+            <element signature="method#teardown#0;class#5082:10010" expanded="false" />
           </folding>
         </state>
       </provider>

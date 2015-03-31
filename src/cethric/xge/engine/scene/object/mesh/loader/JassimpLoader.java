@@ -86,7 +86,7 @@ public class JassimpLoader {
 //                            uv_data.add(w);
                             LOGGER.debug(String.format("U: %s V: %s W: %s", u, v, w));
                         } catch (IndexOutOfBoundsException e) {
-                            LOGGER.debug(String.format("Error Occured at Index: %d VertIndex: %d", index, vertIndex));
+                            LOGGER.debug(String.format("Error Occurred at Index: %d VertIndex: %d", index, vertIndex));
                             LOGGER.error(e.getLocalizedMessage(), e);
                         }
 
@@ -127,6 +127,7 @@ public class JassimpLoader {
                      */
                     @Override
                     public void render(Mat4 V, Mat4 P, ShaderProgram shaderProgram) {
+                        shaderProgram.uset1I("myTextureSampler", 0);
                         glEnableVertexAttribArray(0);
                         glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
                         glVertexAttribPointer(

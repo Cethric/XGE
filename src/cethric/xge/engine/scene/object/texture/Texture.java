@@ -63,6 +63,10 @@ public class Texture {
 
     }
 
+    public int getTextureID() {
+        return this.textureID;
+    }
+
     public void bind() {
         glEnable(textureTarget);
         glActiveTexture(activeTexture);
