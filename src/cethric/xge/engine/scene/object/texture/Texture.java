@@ -38,8 +38,7 @@ public class Texture {
     public void init() {
         textureID = glGenTextures();
         try {
-            File sour = new File(source.getAbsolutePath().replace("\\", "/").replace(".tif", ".png").replace("../maProj_ssAssets/sourceimages/fish/", "../tuna/"));
-            InputStream inputStream = new FileInputStream(sour);
+            InputStream inputStream = new FileInputStream("../tuna/" + source.getName());
             PNGDecoder decoder = new PNGDecoder(inputStream);
             ByteBuffer buffer = ByteBuffer.allocateDirect(4 * decoder.getWidth() * decoder.getHeight()); //.order(ByteOrder.nativeOrder());
             decoder.decode(buffer, decoder.getWidth() * 4, PNGDecoder.Format.RGBA);
@@ -51,6 +50,9 @@ public class Texture {
 
             glTexParameteri(textureTarget, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
             glTexParameteri(textureTarget, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+
+            glTexParameteri(textureTarget, GL_TEXTURE_WRAP_S, GL_CLAMP);
+            glTexParameteri(textureTarget, GL_TEXTURE_WRAP_T, GL_CLAMP);
 
             glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
             glTexImage2D(textureTarget, 0, GL_RGBA, decoder.getWidth(), decoder.getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);

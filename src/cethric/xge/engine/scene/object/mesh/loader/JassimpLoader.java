@@ -104,6 +104,8 @@ public class JassimpLoader {
                 }
                 g_uv_buffer_data.rewind();
 
+                LOGGER.debug(g_vertex_buffer_data);
+
                 Mesh fMesh = new Mesh() {
                     int vertexbuffer;
                     int colorbuffer;
@@ -127,6 +129,7 @@ public class JassimpLoader {
                      */
                     @Override
                     public void render(Mat4 V, Mat4 P, ShaderProgram shaderProgram) {
+                        texture.bind();
                         shaderProgram.uset1I("myTextureSampler", 0);
                         glEnableVertexAttribArray(0);
                         glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
@@ -162,7 +165,6 @@ public class JassimpLoader {
                         );
 
                         // Draw the triangle !
-                        texture.bind();
 
                         glDrawArrays(GL11.GL_TRIANGLES, 0, size / 3); // 3 indices starting at 0 -> 1 triangle
 
