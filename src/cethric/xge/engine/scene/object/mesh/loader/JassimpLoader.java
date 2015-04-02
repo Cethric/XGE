@@ -57,12 +57,19 @@ public class JassimpLoader {
                         int vertIndex = mesh.getFaceVertex(face, index);
                         AiWrapperProvider wrapperProvider = Jassimp.getWrapperProvider();
                         AiVector vector = (AiVector) mesh.getWrappedPosition(vertIndex, wrapperProvider);
-                        g_vertex_buffer_data.put(vector.getX());
-                        g_vertex_buffer_data.put(vector.getY());
-                        g_vertex_buffer_data.put(vector.getZ());
+                        float x, y, z;
+                        x = vector.getX();
+                        y = vector.getY();
+                        z = vector.getZ();
 
-                        AiVector uvCoords = (AiVector) mesh.getWrappedTexCoords(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0), wrapperProvider);
+                        g_vertex_buffer_data.put(x);
+                        g_vertex_buffer_data.put(y);
+                        g_vertex_buffer_data.put(z);
+
+                        LOGGER.debug(String.format("X: %s Y: %s Z: %s", x, y, z));
+
                         try {
+                            AiVector uvCoords = (AiVector) mesh.getWrappedTexCoords(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0), wrapperProvider);
                             float u, v, w;
                             try {
                                 u = uvCoords.getX();
@@ -84,7 +91,7 @@ public class JassimpLoader {
                             uv_data.add(u);
                             uv_data.add(v);
 //                            uv_data.add(w);
-                            LOGGER.debug(String.format("U: %s V: %s W: %s", u, v, w));
+                            LOGGER.debug(String.format("U: %f V: %f W: %f", u, v, w));
                         } catch (IndexOutOfBoundsException e) {
                             LOGGER.debug(String.format("Error Occurred at Index: %d VertIndex: %d", index, vertIndex));
                             LOGGER.error(e.getLocalizedMessage(), e);
@@ -130,7 +137,7 @@ public class JassimpLoader {
                     @Override
                     public void render(Mat4 V, Mat4 P, ShaderProgram shaderProgram) {
                         texture.bind();
-                        shaderProgram.uset1I("myTextureSampler", 0);
+                        shaderProgram.uset1I("myTextureSampler", 1);
                         glEnableVertexAttribArray(0);
                         glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
                         glVertexAttribPointer(
@@ -172,7 +179,7 @@ public class JassimpLoader {
                         glDisableVertexAttribArray(1);
                         glDisableVertexAttribArray(2);
 
-                        texture.unbind();
+//                        texture.unbind();
                     }
 
                     /**

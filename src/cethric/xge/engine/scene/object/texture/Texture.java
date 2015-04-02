@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.nio.ByteBuffer;
 
 import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.opengl.GL13.glActiveTexture;
+import static org.lwjgl.opengl.GL13.*;
 
 /**
  * Created by blakerogan on 19/03/15.
@@ -25,7 +25,7 @@ public class Texture {
 
     private int textureTarget = GL11.GL_TEXTURE_2D;
     private int textureID;
-    private int activeTexture = GL13.GL_TEXTURE0;
+    public int activeTexture = GL13.GL_TEXTURE1;
     private File source;
 
     public Texture(File source) {
@@ -38,25 +38,26 @@ public class Texture {
     public void init() {
         textureID = glGenTextures();
         try {
-            InputStream inputStream = new FileInputStream("../tuna/" + source.getName());
+            InputStream inputStream = new FileInputStream("shapes/" + source.getName());
             PNGDecoder decoder = new PNGDecoder(inputStream);
             ByteBuffer buffer = ByteBuffer.allocateDirect(4 * decoder.getWidth() * decoder.getHeight()); //.order(ByteOrder.nativeOrder());
             decoder.decode(buffer, decoder.getWidth() * 4, PNGDecoder.Format.RGBA);
             buffer.flip();
 
-            glEnable(textureTarget);
-            glActiveTexture(activeTexture);
-            glBindTexture(textureTarget, textureID);
+            glEnable(GL_TEXTURE_2D);
+            glActiveTexture(GL_TEXTURE1);
+            glBindTexture(GL_TEXTURE_2D, textureID);
 
-            glTexParameteri(textureTarget, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-            glTexParameteri(textureTarget, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 
-            glTexParameteri(textureTarget, GL_TEXTURE_WRAP_S, GL_CLAMP);
-            glTexParameteri(textureTarget, GL_TEXTURE_WRAP_T, GL_CLAMP);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
 
             glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
-            glTexImage2D(textureTarget, 0, GL_RGBA, decoder.getWidth(), decoder.getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
-            glBindTexture(textureTarget, 0);
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, decoder.getWidth(), decoder.getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+//            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, decoder.getWidth(), decoder.getHeight(), 0, GL_RGBA, GL_BYTE, buffer);
+            glBindTexture(GL_TEXTURE_2D, 0);
             LOGGER.debug("Texture Loaded");
 
         } catch (Exception e) {
@@ -70,14 +71,14 @@ public class Texture {
     }
 
     public void bind() {
-        glEnable(textureTarget);
-        glActiveTexture(activeTexture);
-        glBindTexture(textureTarget, textureID);
+        glEnable(GL_TEXTURE_2D);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, textureID);
     }
 
     public void unbind() {
-        glBindTexture(textureTarget, 0);
-        glDisable(textureTarget);
+        glBindTexture(GL_TEXTURE_2D, 0);
+        glDisable(GL_TEXTURE_2D);
     }
 
 }

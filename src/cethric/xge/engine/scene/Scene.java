@@ -55,7 +55,7 @@ public class Scene implements IScene {
     // Scene Contents
     private List<Object> objects = new ArrayList<Object>();
     private List<Camera> cameras = new ArrayList<Camera>();
-    private Mat4 Projection = Matrices.perspective(45.0f, 3.0f / 3.0f, 0.1f, 1000.0f),
+    private Mat4 Projection = Matrices.perspective(45.0f, 3.0f / 3.0f, 0.1f, 10000000.0f),
             View = Matrices.lookAt(
                     new Vec3(1, 50, 1), // Camera is at (4,3,3), in World Space
                     new Vec3(0, 0,0), // and looks at the origin
@@ -183,7 +183,7 @@ public class Scene implements IScene {
                 "in vec2 UV;\n" +
                 "\n" +
                 "// Ouput data\n" +
-                "out vec3 color;\n" +
+                "out vec4 color;\n" +
                 "\n" +
                 "// Values that stay constant for the whole mesh.\n" +
                 "uniform sampler2D myTextureSampler;\n" +
@@ -193,9 +193,9 @@ public class Scene implements IScene {
                 "\t// Output color = color specified in the vertex shader, \n" +
                 "\t// interpolated between all 3 surrounding vertices\n" +
                 "\tif (UV != vec2(0, 0)) {\n" +
-                "\t\tcolor = texture( myTextureSampler, UV ).rgb;\n" +
+                "\t\tcolor = texture( myTextureSampler, UV ).rgba;\n" +
                 "\t} else {\n" +
-                "\t\tcolor = fragmentColor;\n" +
+                "\t\tcolor = vec4(fragmentColor.x, fragmentColor.y, fragmentColor.z, 1);\n" +
                 "\t}\n" +
                 "\n" +
                 "}";
