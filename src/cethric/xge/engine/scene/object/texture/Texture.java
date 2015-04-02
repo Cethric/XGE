@@ -56,7 +56,6 @@ public class Texture {
 
             glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, decoder.getWidth(), decoder.getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
-//            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, decoder.getWidth(), decoder.getHeight(), 0, GL_RGBA, GL_BYTE, buffer);
             glBindTexture(GL_TEXTURE_2D, 0);
             LOGGER.debug("Texture Loaded");
 

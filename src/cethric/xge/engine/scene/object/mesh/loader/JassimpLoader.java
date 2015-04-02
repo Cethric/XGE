@@ -67,31 +67,31 @@ public class JassimpLoader {
                         g_vertex_buffer_data.put(z);
 
                         LOGGER.debug(String.format("X: %s Y: %s Z: %s", x, y, z));
-
                         try {
-                            AiVector uvCoords = (AiVector) mesh.getWrappedTexCoords(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0), wrapperProvider);
+                            AiVector uvCoords = (AiVector) mesh.getWrappedTexCoords(index, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0), wrapperProvider);
+                            LOGGER.debug("Index: " + index + " VertIndex: " + vertIndex);
                             float u, v, w;
                             try {
-                                u = uvCoords.getX();
+                                u = mesh.getTexCoordU(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0)); //uvCoords.getX();
                             } catch (IndexOutOfBoundsException e) {
                                 u = 0.1f;
                             }
                             try {
-                                v = uvCoords.getY();
+                                v = mesh.getTexCoordV(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0)); //uvCoords.getY();
                             } catch (IndexOutOfBoundsException e) {
                                 v = 0.1f;
                             }
-                            try {
-                                w = uvCoords.getZ();
-                            } catch (IndexOutOfBoundsException e) {
-                                w = 0.1f;
-                            } catch (UnsupportedOperationException e1) {
-                                w = 0.1f;
-                            }
+                            //try {
+                            //    w = mesh.getTexCoordW(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0)); //uvCoords.getZ();
+                            //} catch (IndexOutOfBoundsException e) {
+                            //    w = 0.1f;
+                            //} catch (UnsupportedOperationException e1) {
+                            //    w = 0.1f;
+                            //}
                             uv_data.add(u);
                             uv_data.add(v);
 //                            uv_data.add(w);
-                            LOGGER.debug(String.format("U: %f V: %f W: %f", u, v, w));
+                            LOGGER.debug(String.format("U: %f V: %f", u, v));
                         } catch (IndexOutOfBoundsException e) {
                             LOGGER.debug(String.format("Error Occurred at Index: %d VertIndex: %d", index, vertIndex));
                             LOGGER.error(e.getLocalizedMessage(), e);

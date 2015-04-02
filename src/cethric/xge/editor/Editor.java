@@ -145,8 +145,9 @@ public class Editor {
 
         window.setSceneManager(sceneManager);
         window.loop();
-    }
 
+        errorCallback.release();
+    }
 
     public static void main(String[] args) {
         final Editor editor = new Editor();
