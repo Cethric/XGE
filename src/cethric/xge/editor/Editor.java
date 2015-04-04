@@ -91,12 +91,10 @@ public class Editor {
         float n = 120f;
 
         Object object1 = new Object(new Vector3f(n, 50, 0), quat4f);
-        object1.setMeshManager(JassimpLoader.loadMesh("shapes/shapes_plane.obj"));
+        object1.setMeshManager(JassimpLoader.loadMesh("shapes/tuna.obj"));
 
         Object object2 = new Object(new Vector3f(n, 50, n), quat4f);
-        MeshManager meshManager2 = new MeshManager();
-        meshManager2.addMesh(new Cube());
-        object2.setMeshManager(meshManager2);
+        object2.setMeshManager(JassimpLoader.loadMesh("shapes/shapes_plane.obj"));
 
         Object object3 = new Object(new Vector3f(-n, 50, n), quat4f);
         MeshManager meshManager3 = new MeshManager();

@@ -39,6 +39,25 @@ public class MeshManager implements IMeshManager {
     }
 
     /**
+     * Return the mesh at id 'x'
+     *
+     * @param id int; the id/index of the mesh to return
+     * @return Mesh; the mesh that was at the id/index 'x'
+     */
+    @Override
+    public Mesh getMesh(int id) {
+        return meshs.get(id);
+    }
+
+    /**
+     * @return ArrayList&lt;Mesh&gt;; the array containing all the meshs
+     */
+    @Override
+    public List<Mesh> getMeshs() {
+        return this.meshs;
+    }
+
+    /**
      * Return if this MeshManger is animated and so should render each mesh on a new frame.
      *
      * @return boolean; if the MeshManager is animated

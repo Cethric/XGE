@@ -4,12 +4,15 @@ import cethric.xge.engine.scene.object.mesh.Mesh;
 import cethric.xge.engine.scene.object.mesh.MeshManager;
 import cethric.xge.engine.scene.object.texture.Texture;
 import cethric.xge.engine.scene.shader.ShaderProgram;
+import com.bulletphysics.collision.shapes.ConvexHullShape;
+import com.bulletphysics.util.ObjectArrayList;
 import com.hackoeur.jglm.Mat4;
 import jassimp.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.GL11;
 
+import javax.vecmath.Vector3f;
 import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -32,7 +35,7 @@ import static org.lwjgl.opengl.GL30.glGenVertexArrays;
 public class JassimpLoader {
     private static Logger LOGGER = LogManager.getLogger(JassimpLoader.class);
     public JassimpLoader() {
-
+        // Nothing to do here
     }
 
     public static MeshManager loadMesh(String filePath) {
@@ -46,6 +49,8 @@ public class JassimpLoader {
                 final FloatBuffer g_vertex_buffer_data = ByteBuffer.allocateDirect(size * Float.BYTES).order(ByteOrder.nativeOrder()).asFloatBuffer();
                 final FloatBuffer g_color_buffer_data = ByteBuffer.allocateDirect(size * Float.BYTES).order(ByteOrder.nativeOrder()).asFloatBuffer();
                 List<Float> uv_data = new ArrayList<Float>();
+
+                final ConvexHullShape convexHullShape = new ConvexHullShape(new ObjectArrayList<Vector3f>());
 
                 int faces = mesh.getNumFaces();
                 AiMaterial material = materialList.get(mesh.getMaterialIndex());
@@ -65,37 +70,24 @@ public class JassimpLoader {
                         g_vertex_buffer_data.put(x);
                         g_vertex_buffer_data.put(y);
                         g_vertex_buffer_data.put(z);
+                        convexHullShape.addPoint(new Vector3f(x,y,z));
 
                         LOGGER.debug(String.format("X: %s Y: %s Z: %s", x, y, z));
+
+                        float u, v;
                         try {
-                            AiVector uvCoords = (AiVector) mesh.getWrappedTexCoords(index, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0), wrapperProvider);
-                            LOGGER.debug("Index: " + index + " VertIndex: " + vertIndex);
-                            float u, v, w;
-                            try {
-                                u = mesh.getTexCoordU(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0)); //uvCoords.getX();
-                            } catch (IndexOutOfBoundsException e) {
-                                u = 0.1f;
-                            }
-                            try {
-                                v = mesh.getTexCoordV(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0)); //uvCoords.getY();
-                            } catch (IndexOutOfBoundsException e) {
-                                v = 0.1f;
-                            }
-                            //try {
-                            //    w = mesh.getTexCoordW(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0)); //uvCoords.getZ();
-                            //} catch (IndexOutOfBoundsException e) {
-                            //    w = 0.1f;
-                            //} catch (UnsupportedOperationException e1) {
-                            //    w = 0.1f;
-                            //}
-                            uv_data.add(u);
-                            uv_data.add(v);
-//                            uv_data.add(w);
-                            LOGGER.debug(String.format("U: %f V: %f", u, v));
+                            u = mesh.getTexCoordU(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0)); //uvCoords.getX();
                         } catch (IndexOutOfBoundsException e) {
-                            LOGGER.debug(String.format("Error Occurred at Index: %d VertIndex: %d", index, vertIndex));
-                            LOGGER.error(e.getLocalizedMessage(), e);
+                            u = 0.1f;
                         }
+                        try {
+                            v = mesh.getTexCoordV(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0)); //uvCoords.getY();
+                        } catch (IndexOutOfBoundsException e) {
+                            v = 0.1f;
+                        }
+                        uv_data.add(u);
+                        uv_data.add(1-v);
+                        LOGGER.debug(String.format("U: %f V: %f", u, 1-v));
 
                         g_color_buffer_data.put(new Random().nextFloat());
                         g_color_buffer_data.put(new Random().nextFloat());
@@ -117,6 +109,14 @@ public class JassimpLoader {
                     int vertexbuffer;
                     int colorbuffer;
                     int uvbuffer;
+
+                    // Physics
+                    private ConvexHullShape collisionShape;
+
+                    @Override
+                    public ConvexHullShape getCollisionShape() {
+                        return this.collisionShape;
+                    }
                     /**
                      * Called on every update tick
                      *
@@ -201,6 +201,9 @@ public class JassimpLoader {
                         uvbuffer = glGenBuffers();
                         glBindBuffer(GL_ARRAY_BUFFER, uvbuffer);
                         glBufferData(GL_ARRAY_BUFFER, g_uv_buffer_data, GL_STATIC_DRAW);
+
+                        collisionShape = convexHullShape;
+
                     }
 
                     /**

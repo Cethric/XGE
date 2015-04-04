@@ -1,20 +1,17 @@
 package cethric.xge.engine.scene.object.mesh;
 
 import cethric.xge.engine.scene.shader.ShaderProgram;
+import com.bulletphysics.collision.shapes.BoxShape;
 import com.hackoeur.jglm.Mat4;
 
+import javax.vecmath.Vector3f;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 
-import static org.lwjgl.opengl.GL11.GL_FLOAT;
-import static org.lwjgl.opengl.GL11.GL_TRIANGLES;
-import static org.lwjgl.opengl.GL11.glDrawArrays;
+import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL15.*;
-import static org.lwjgl.opengl.GL15.GL_STATIC_DRAW;
-import static org.lwjgl.opengl.GL20.glDisableVertexAttribArray;
-import static org.lwjgl.opengl.GL20.glEnableVertexAttribArray;
-import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
+import static org.lwjgl.opengl.GL20.*;
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
 import static org.lwjgl.opengl.GL30.glGenVertexArrays;
 
@@ -24,10 +21,17 @@ import static org.lwjgl.opengl.GL30.glGenVertexArrays;
 public class Cube extends Mesh {
     int vertexbuffer;
     int colorbuffer;
+    private BoxShape collisionShape;
 
     public Cube() {
         super();
         setName(String.format("MeshCube.%03d", meshCount));
+        collisionShape = new BoxShape(new Vector3f(50, 50, 50));
+    }
+
+    @Override
+    public BoxShape getCollisionShape() {
+        return this.collisionShape;
     }
 
     /**

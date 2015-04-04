@@ -33,7 +33,7 @@ public class Camera implements ICamera {
     private Vec3 worldUp;
     private float yaw;
     private float pitch;
-    private float movementSpeed = 5.0f;
+    private float movementSpeed = 2.5f;
     private float mouseSensitivity = 0.05f;
     private int[] strafe = new int[] {0, 0};
 
@@ -43,7 +43,7 @@ public class Camera implements ICamera {
 
 
     public Camera(Vec3 position, Vec3 up, float yaw, float pitch) {
-        float mass = 100f;
+        float mass = 500f;
         collisionShape = new CapsuleShape(25f, 90f);
         Quat4f rotation = new Quat4f();
         QuaternionUtil.setEuler(rotation, -(float)Math.toRadians(yaw), (float)Math.toRadians(pitch), 0);
@@ -179,10 +179,12 @@ public class Camera implements ICamera {
      */
     @Override
     public void update(long delta) {
+        rigidBody.setDamping(0.1f, 1);
         Transform nt = new Transform();
         rigidBody.getWorldTransform(nt);
         Vec3 npos = new Vec3(nt.origin.x, nt.origin.y+90f, nt.origin.z);
         this.position = npos;
+//        rigidBody.setLinearVelocity(new Vector3f(0, 0, 0));
 
         float dt = delta / 1000f;
         float speed = dt * movementSpeed;

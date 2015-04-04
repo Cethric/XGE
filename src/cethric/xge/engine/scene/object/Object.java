@@ -1,8 +1,9 @@
 package cethric.xge.engine.scene.object;
 
+import cethric.xge.engine.scene.object.mesh.Mesh;
 import cethric.xge.engine.scene.object.mesh.MeshManager;
 import cethric.xge.engine.scene.shader.ShaderProgram;
-import com.bulletphysics.collision.shapes.BoxShape;
+import com.bulletphysics.collision.shapes.CompoundShape;
 import com.bulletphysics.dynamics.RigidBody;
 import com.bulletphysics.dynamics.RigidBodyConstructionInfo;
 import com.bulletphysics.linearmath.DefaultMotionState;
@@ -28,7 +29,8 @@ public class Object implements IRenderable {
 
     // Physics Stuff
     private RigidBody rigidBody;
-    private BoxShape collisionShape;
+    private CompoundShape collisionShape;
+    private DefaultMotionState initialMotionState;
 
     private float[] modelMatrix = new float[16];
     FloatBuffer Mvp = ByteBuffer.allocateDirect(64).order(ByteOrder.nativeOrder()).asFloatBuffer();
@@ -37,13 +39,8 @@ public class Object implements IRenderable {
     private MeshManager meshManager;
 
     public Object(Vector3f position, Quat4f rotation) {
-        collisionShape = new BoxShape(new Vector3f(50, 50, 50));
-
-        DefaultMotionState motionState = new DefaultMotionState(new Transform(new Matrix4f(rotation, position, 1)));
-        Vector3f inertia = new Vector3f();
-        collisionShape.calculateLocalInertia(10f, inertia);
-        RigidBodyConstructionInfo rigidBodyCI = new RigidBodyConstructionInfo(10f, motionState, collisionShape, inertia);
-        rigidBody = new RigidBody(rigidBodyCI);
+        collisionShape = new CompoundShape(); //(new Vector3f(50, 50, 50));
+        initialMotionState = new DefaultMotionState(new Transform(new Matrix4f(rotation, position, 1)));
         objectCount++;
 
         meshManager = new MeshManager();
@@ -88,6 +85,15 @@ public class Object implements IRenderable {
     @Override
     public void setup() {
         meshManager.setup();
+        for (Mesh mesh : meshManager.getMeshs()) {
+            LOGGER.debug(mesh.getCollisionShape());
+            collisionShape.addChildShape(new Transform(new Matrix4f(new Quat4f(0, 0, 0, 1), new Vector3f(0, 0, 0), 1.0f)), mesh.getCollisionShape());
+        }
+
+        Vector3f inertia = new Vector3f();
+        collisionShape.calculateLocalInertia(10f, inertia);
+        RigidBodyConstructionInfo rigidBodyCI = new RigidBodyConstructionInfo(10f, initialMotionState, collisionShape, inertia);
+        rigidBody = new RigidBody(rigidBodyCI);
     }
 
     /**

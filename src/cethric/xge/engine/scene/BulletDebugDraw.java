@@ -25,7 +25,7 @@ import static org.lwjgl.opengl.GL30.glGenVertexArrays;
  */
 public class BulletDebugDraw extends IDebugDraw {
     private Logger LOGGER = LogManager.getLogger(BulletDebugDraw.class);
-    private int debugMode = DebugDrawModes.DRAW_AABB | DebugDrawModes.DRAW_WIREFRAME | DebugDrawModes.DRAW_CONTACT_POINTS | DebugDrawModes.DRAW_TEXT | DebugDrawModes.DRAW_FEATURES_TEXT | DebugDrawModes.PROFILE_TIMINGS | DebugDrawModes.ENABLE_SAT_COMPARISON;
+    private int debugMode = DebugDrawModes.DRAW_WIREFRAME | DebugDrawModes.DRAW_CONTACT_POINTS | DebugDrawModes.DRAW_TEXT | DebugDrawModes.DRAW_FEATURES_TEXT | DebugDrawModes.PROFILE_TIMINGS | DebugDrawModes.ENABLE_SAT_COMPARISON | DebugDrawModes.DRAW_AABB;
     @Override
     public void drawLine(Vector3f from, Vector3f to, Vector3f color) {
         int VertexArrayID = glGenVertexArrays();

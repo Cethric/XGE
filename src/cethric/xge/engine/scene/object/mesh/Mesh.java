@@ -1,7 +1,11 @@
 package cethric.xge.engine.scene.object.mesh;
 
 import cethric.xge.engine.scene.shader.ShaderProgram;
+import com.bulletphysics.collision.shapes.BoxShape;
+import com.bulletphysics.collision.shapes.CollisionShape;
 import com.hackoeur.jglm.Mat4;
+
+import javax.vecmath.Vector3f;
 
 /**
  * Created by blakerogan on 21/03/15.
@@ -10,8 +14,16 @@ public abstract class Mesh implements IMesh {
     static int meshCount = 0;
     private String meshName = String.format("Mesh.%03d", meshCount);
 
+    //Physics
+    private CollisionShape collisionShape;
+
     public Mesh() {
         meshCount++;
+        collisionShape = new BoxShape(new Vector3f(50, 50, 50));
+    }
+
+    public CollisionShape getCollisionShape() {
+        return this.collisionShape;
     }
 
     /**

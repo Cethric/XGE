@@ -208,6 +208,9 @@ public class Scene implements IScene {
         glEnable(GL_DEPTH_TEST);
         glDepthFunc(GL_LESS);
         glClearColor(0f, 0f, 0.4f, 1f);
+
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     }
 
     /**
@@ -368,8 +371,8 @@ public class Scene implements IScene {
 
     public void addObject(Object object) {
         objects.add(object);
-        dynamicsWorld.addRigidBody(object.getRigidBody());
         object.setup();
+        dynamicsWorld.addRigidBody(object.getRigidBody());
     }
 
     public void addCamera(Camera camera) {
