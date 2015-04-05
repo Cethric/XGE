@@ -9,7 +9,7 @@ public interface IScene extends IIntractable {
     /**
      * When called this function runs the scene update process
      */
-    public void render();
+    public void render(int width, int height);
 
     /**
      * When called this function updates the scene

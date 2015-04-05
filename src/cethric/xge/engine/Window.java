@@ -378,7 +378,7 @@ public class Window implements IWindow {
     @Override
     public void render() {
 //        LOGGER.debug("render");
-        sceneManager.render();
+        sceneManager.render(this.windowWidth, this.windowHeight);
 
     }
 

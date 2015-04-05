@@ -4,9 +4,11 @@ import cethric.xge.engine.scene.object.mesh.Mesh;
 import cethric.xge.engine.scene.object.mesh.MeshManager;
 import cethric.xge.engine.scene.object.texture.Texture;
 import cethric.xge.engine.scene.shader.ShaderProgram;
+import cethric.xge.util.MeshUtil;
 import com.bulletphysics.collision.shapes.ConvexHullShape;
 import com.bulletphysics.util.ObjectArrayList;
 import com.hackoeur.jglm.Mat4;
+import com.sun.istack.internal.Nullable;
 import jassimp.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -38,7 +40,7 @@ public class JassimpLoader {
         // Nothing to do here
     }
 
-    public static MeshManager loadMesh(String filePath) {
+    public static MeshManager loadMesh(String filePath, @Nullable Texture diff, @Nullable Texture norm, @Nullable Texture spec) {
         MeshManager meshManager = new MeshManager();
         try {
             AiScene aiScene = Jassimp.importFile(filePath);
@@ -71,7 +73,7 @@ public class JassimpLoader {
                         g_vertex_buffer_data.put(x);
                         g_vertex_buffer_data.put(y);
                         g_vertex_buffer_data.put(z);
-                        convexHullShape.addPoint(new Vector3f(x,y,z));
+//                        convexHullShape.addPoint(new Vector3f(x,y,z));
 //                        LOGGER.debug(String.format("X: %s Y: %s Z: %s", x, y, z));
 
                         //Normal
@@ -121,8 +123,12 @@ public class JassimpLoader {
                 }
                 g_uv_buffer_data.rewind();
 
+                Object[] indexedVertexArray = MeshUtil.indexVertexArray(g_vertex_buffer_data);
+                for (Vector3f vector3f : (List<Vector3f>)indexedVertexArray[0]) {
+                    convexHullShape.addPoint(vector3f);
+                }
+
                 Mesh fMesh = new Mesh() {
-                    public Texture specTexture;
                     int vertexbuffer;
                     int normalbuffer;
                     int colorbuffer;
@@ -157,7 +163,6 @@ public class JassimpLoader {
                         if (textureDiff != null) {
                             textureDiff.bind();
                             shaderProgram.uset1I("DiffuseTexture", textureDiff.getTextureUnit());
-//                            System.out.printf("DiffuseTexture %d%n", textureDiff.getTextureUnit());
                         }
                         if (textureNorm != null) {
                             textureNorm.bind();
@@ -261,18 +266,24 @@ public class JassimpLoader {
 
                     }
                 };
-                if (material.getNumTextures(AiTextureType.DIFFUSE) > 0) {
-                    String diffFile = material.getTextureFile(AiTextureType.DIFFUSE, 0);
-                    try {
-                        fMesh.textureDiff = Texture.LoadTexture(new File(diffFile), AiTextureType.DIFFUSE);
-                    } catch (Exception e) {
-                        continue;
+                if (diff != null) {
+                    fMesh.textureDiff = diff;
+                } else {
+                    if (material.getNumTextures(AiTextureType.DIFFUSE) > 0) {
+                        String diffFile = material.getTextureFile(AiTextureType.DIFFUSE, 0);
+                        try {
+                            System.out.printf("Loading Diff Texture: %s%n", diffFile);
+                            fMesh.textureDiff = Texture.LoadTexture(new File(diffFile), AiTextureType.DIFFUSE);
+                        } catch (Exception e) {
+                            continue;
+                        }
                     }
                 }
                 if (material.getNumTextures(AiTextureType.SPECULAR) > 0) {
                     String specFile = material.getTextureFile(AiTextureType.SPECULAR, 0);
                     System.out.println(specFile);
                     try {
+                        System.out.printf("Loading Spec Texture: %s%n", specFile);
                         fMesh.textureSpec = Texture.LoadTexture(new File(specFile), AiTextureType.SPECULAR);
                     } catch (Exception e) {
                         continue;
@@ -282,6 +293,7 @@ public class JassimpLoader {
                     String normFile = material.getTextureFile(AiTextureType.NORMALS, 0);
                     System.out.println(normFile);
                     try {
+                        System.out.printf("Loading Normal Texture: %s%n", normFile);
                         fMesh.textureNorm = Texture.LoadTexture(new File(normFile), AiTextureType.NORMALS);
                     } catch (Exception e) {
                         continue;
@@ -289,6 +301,7 @@ public class JassimpLoader {
                 }
                 fMesh.setName('"' + new File(filePath).getName() + mesh.getName() + '"');
                 meshManager.addMesh(fMesh);
+                System.out.printf("Loaded Mesh: %s%n", fMesh.getName());
 
             }
 

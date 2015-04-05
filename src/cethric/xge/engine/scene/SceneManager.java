@@ -47,10 +47,10 @@ public class SceneManager implements ISceneManager {
      * When called this function runs the scene update process
      */
     @Override
-    public void render() {
+    public void render(int width, int height) {
         for (Scene scene : scenes) {
             if (scene.registered()) {
-                scene.render();
+                scene.render(width, height);
             }
         }
     }

@@ -6,9 +6,11 @@ import cethric.xge.engine.scene.SceneManager;
 import cethric.xge.engine.scene.object.Object;
 import cethric.xge.engine.scene.object.camera.Camera;
 import cethric.xge.engine.scene.object.mesh.loader.JassimpLoader;
+import cethric.xge.engine.scene.object.texture.Texture;
 import cethric.xge.util.XGEUtil;
 import com.hackoeur.jglm.Vec3;
 import com.thoughtworks.xstream.XStream;
+import jassimp.AiTextureType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.LWJGLUtil;
@@ -19,6 +21,7 @@ import org.lwjgl.opengl.GL11;
 import javax.vecmath.Quat4f;
 import javax.vecmath.Vector3f;
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.Map;
 
@@ -94,23 +97,33 @@ public class Editor {
         Scene scene = new Scene();
         sceneManager.addScene(scene);
         scene.active(true);
-        Quat4f quat4f = new Quat4f();
-//        QuaternionUtil.setEuler(quat4f, 10, 10, 20);
-//        quat4f.normalize();
+        Quat4f quat4f = new Quat4f(0, 0, 0, 1);
 
         float n = 120f;
 
         Object object1 = new Object(new Vector3f(n, 60, 0), quat4f);
-        object1.setMeshManager(JassimpLoader.loadMesh("shapes/objects/test/m_roof.fbx"));
+        try {
+            object1.setMeshManager(JassimpLoader.loadMesh("shapes/objects/test/m_roof.fbx", Texture.LoadTexture(new File("shapes/textures/tex_enviro_dif.png"), AiTextureType.DIFFUSE), Texture.LoadTexture(new File("shapes/textures/tex_enviro_nrm.png"), AiTextureType.NORMALS), Texture.LoadTexture(new File("shapes/textures/tex_enviro_gls.png"), AiTextureType.SPECULAR)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-//        Object object2 = new Object(new Vector3f(n, 50, n), quat4f);
-//        object2.setMeshManager(JassimpLoader.loadMesh("shapes/objects/shapes_plane.obj"));
+        Object object2 = new Object(new Vector3f(n, 50, n), quat4f);
+        object2.setMeshManager(JassimpLoader.loadMesh("shapes/objects/shapes_plane.obj", null, null, null));
 
-//        Object object3 = new Object(new Vector3f(-n, 60, n), quat4f);
-//        object3.setMeshManager(JassimpLoader.loadMesh("shapes/objects/test/m_track.fbx"));
+        Object object3 = new Object(new Vector3f(-n, 60, n), quat4f);
+        try {
+            object3.setMeshManager(JassimpLoader.loadMesh("shapes/objects/test/m_pillar.fbx", Texture.LoadTexture(new File("shapes/textures/tex_enviro_dif.png"), AiTextureType.DIFFUSE), Texture.LoadTexture(new File("shapes/textures/tex_enviro_nrm.png"), AiTextureType.NORMALS), Texture.LoadTexture(new File("shapes/textures/tex_enviro_gls.png"), AiTextureType.SPECULAR)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-//        Object object4 = new Object(new Vector3f(n, 60, -n), quat4f);
-//        object4.setMeshManager(JassimpLoader.loadMesh("shapes/objects/test/m_wall_S.fbx"));
+        Object object4 = new Object(new Vector3f(n, 60, -n), quat4f);
+        try {
+            object4.setMeshManager(JassimpLoader.loadMesh("shapes/objects/test/m_platform.fbx", Texture.LoadTexture(new File("shapes/textures/tex_enviro_dif.png"), AiTextureType.DIFFUSE), Texture.LoadTexture(new File("shapes/textures/tex_enviro_nrm.png"), AiTextureType.NORMALS), Texture.LoadTexture(new File("shapes/textures/tex_enviro_gls.png"), AiTextureType.SPECULAR)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 //        Object object5 = new Object(new Vector3f(n, 100, n), quat4f);
 //        MeshManager meshManager5 = new MeshManager();
@@ -118,9 +131,9 @@ public class Editor {
 //        object5.setMeshManager(meshManager5);
 
         scene.addObject(object1);
-//        scene.addObject(object2);
-//        scene.addObject(object3);
-//        scene.addObject(object4);
+        scene.addObject(object2);
+        scene.addObject(object3);
+        scene.addObject(object4);
 //        scene.addObject(object5);
 
         Camera camera = new Camera(new Vec3(0, 180, 0), new Vec3(0, 1, 0), 0, 0);

@@ -2,6 +2,7 @@ package cethric.xge.engine.scene;
 
 import cethric.xge.engine.scene.object.Object;
 import cethric.xge.engine.scene.object.camera.Camera;
+import cethric.xge.engine.scene.object.camera.Light;
 import cethric.xge.engine.scene.shader.FragmentShader;
 import cethric.xge.engine.scene.shader.ShaderProgram;
 import cethric.xge.engine.scene.shader.VertexShader;
@@ -20,6 +21,9 @@ import com.hackoeur.jglm.Matrices;
 import com.hackoeur.jglm.Vec3;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.lwjgl.opengl.GL12;
+import org.lwjgl.opengl.GL13;
+import org.lwjgl.opengl.GL14;
 
 import javax.vecmath.Matrix4f;
 import javax.vecmath.Quat4f;
@@ -33,6 +37,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL13.GL_TEXTURE31;
+import static org.lwjgl.opengl.GL13.glActiveTexture;
+import static org.lwjgl.opengl.GL30.*;
+import static org.lwjgl.opengl.GL32.glFramebufferTexture;
 
 /**
  * Created by blakerogan on 14/03/15.
@@ -60,14 +68,17 @@ public class Scene implements IScene {
     private Mat4 Projection = Matrices.perspective(45.0f, 3.0f / 3.0f, 0.1f, 10000000.0f),
             View = Matrices.lookAt(
                     new Vec3(1, 50, 1), // Camera is at (4,3,3), in World Space
-                    new Vec3(0, 0,0), // and looks at the origin
-                    new Vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
-                    ),
+                    new Vec3(0, 0, 0), // and looks at the origin
+                    new Vec3(0, 1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
+            ),
             VP = Projection.multiply(View);
 
     // Shaders
     private ShaderProgram shaderProgram;
+    private ShaderProgram depthShader;
     FloatBuffer Mvp = ByteBuffer.allocateDirect(64).order(ByteOrder.nativeOrder()).asFloatBuffer();
+    private int framebuffer;
+    private int depthTextureID;
 
 
     public Scene() {
@@ -78,19 +89,63 @@ public class Scene implements IScene {
      * When called this function runs the scene update process
      */
     @Override
-    public void render() {
-        shaderProgram.install();
+    public void render(int width, int height) {
+        glBindFramebuffer(GL_FRAMEBUFFER, this.framebuffer);
+        glViewport(0, 0, 1024, 1024);
+        glEnable(GL_CULL_FACE);
+        glCullFace(GL_BACK);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        this.depthShader.install();
+//        Mat4 depthProjectionMatrix = Matrices.ortho(-10, 10, -10, 10, -10, 20);
+        Mat4 depthProjectionMatrix = Matrices.perspective(45.0f, 1.0f, 0.01f, 10000f);
+//        Mat4 depthViewMatrix = Matrices.lookAt(new Vec3(0.5f, 2.0f, 2.0f), new Vec3(0, 0, 0), new Vec3(0, 1, 0));
+        Light test = new Light(new Vec3(10, 700, 0), new Vec3(0, 1, 0), 0, -82f);
+        test.update(0l);
+        Mat4 depthViewMatrix = test.getView();
+        Mat4 depthModelMatrix = Mat4.MAT4_IDENTITY;
+        Mat4 DMVP = depthProjectionMatrix.multiply(depthViewMatrix).multiply(depthModelMatrix);
+        Mvp.put(DMVP.getBuffer());
+        Mvp.rewind();
+        depthShader.usetM4F("MVP", false, Mvp);
 
-        shaderProgram.uset3F("LightPosition_worldspace", 50, 50, 0);
+        for (Object object : objects) {
+            object.render(depthViewMatrix, depthProjectionMatrix, depthShader);
+        }
 
-        sceneManager.render();
+//        depthShader.uninstall();
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        glViewport(0, 0, width, height);
+
+        glEnable(GL_CULL_FACE);
+        glCullFace(GL_BACK);
+
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+
+        shaderProgram.install();
+        Mat4 biasMatrix = new Mat4(new float[] {
+                0.5f, 0.0f, 0.0f, 0.0f,
+                0.0f, 0.5f, 0.0f, 0.0f,
+                0.0f, 0.0f, 0.5f, 0.0f,
+                0.5f, 0.5f, 0.5f, 1.0f});
+
+        Mat4 depthBiasMVP = biasMatrix.multiply(DMVP);
+        Mvp.put(depthBiasMVP.getBuffer());
+        Mvp.rewind();
+        shaderProgram.usetM4F("DepthBiasMVP", false, Mvp);
+
+        glActiveTexture(GL_TEXTURE31);
+        glBindTexture(GL_TEXTURE_2D, depthTextureID);
+        shaderProgram.uset1I("shadowMap", 31);
+
+        sceneManager.render(width, height);
         for (Object object : objects) {
             object.render(View, Projection, shaderProgram);
+//            object.render(depthViewMatrix, depthProjectionMatrix, shaderProgram);
         }
 
         Mat4 MVP = Projection.multiply(View).multiply(Mat4.MAT4_IDENTITY);
         Mvp.put(MVP.getBuffer());
+//        Mvp.put(DMVP.getBuffer());
         Mvp.rewind();
         shaderProgram.usetM4F("MVP", false, Mvp);
 
@@ -142,7 +197,7 @@ public class Scene implements IScene {
         dispatcher = new CollisionDispatcher(collisionConfiguration);
         solver = new SequentialImpulseConstraintSolver();
         dynamicsWorld = new DiscreteDynamicsWorld(dispatcher, broadphase, solver, collisionConfiguration);
-        dynamicsWorld.setGravity(new Vector3f(0, -10f, 0));
+        dynamicsWorld.setGravity(new Vector3f(0, -9.8f, 0));
 
         StaticPlaneShape groundShape = new StaticPlaneShape(new Vector3f(0, 1, 0), 1);
         DefaultMotionState groundMotionState = new DefaultMotionState(new Transform(new Matrix4f(new Quat4f(0, 0, 0, 1), new Vector3f(0, -1, 0), 1f)));
@@ -152,60 +207,43 @@ public class Scene implements IScene {
 
         dynamicsWorld.setDebugDrawer(new BulletDebugDraw());
 
-/*        CharSequence vertex_shader = "" +
-                "#version 330 core\n" +
-                "\n" +
-                "// Input vertex data, different for all executions of this shader.\n" +
-                "layout(location = 0) in vec3 vertexPosition_modelspace;\n" +
-                "layout(location = 1) in vec3 vertexColor;\n" +
-                "layout(location = 2) in vec2 vertexUV;\n" +
-                "\n" +
-                "// Output data ; will be interpolated for each fragment.\n" +
-                "out vec3 fragmentColor;\n" +
-                "out vec2 UV;\n" +
-                "// Values that stay constant for the whole mesh.\n" +
-                "uniform mat4 MVP;\n" +
-                "\n" +
-                "void main(){\t\n" +
-                "\n" +
-                "\t// Output position of the vertex, in clip space : MVP * position\n" +
-                "\tgl_Position =  MVP * vec4(vertexPosition_modelspace,1);\n" +
-                "\n" +
-                "\t// The color of each vertex will be interpolated\n" +
-                "\t// to produce the color of each fragment\n" +
-                "\tfragmentColor = vertexColor;\n" +
-                "\tUV = vertexUV;\n" +
-                "}\n" +
-                "\n";
+        // Setup Frame Buffer
+        VertexShader depthVertexShader = null;
+        FragmentShader depthFragmentShader = null;
+        try {
+            depthVertexShader = new VertexShader("DepthRTTVS", new File("shaders/OpenGL_Tutorial/DepthRTT.vertexshader"));
+            depthFragmentShader = new FragmentShader("DepthRTTFS", new File("shaders/OpenGL_Tutorial/DepthRTT.fragmentshader"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        this.depthShader = new ShaderProgram(depthVertexShader, depthFragmentShader, null);
+        this.depthShader.link();
+        
+        this.framebuffer = glGenFramebuffers();
+        glBindFramebuffer(GL_FRAMEBUFFER, this.framebuffer);
 
+        // Setup the depth texture
+        this.depthTextureID = glGenTextures();
+        glActiveTexture(GL13.GL_TEXTURE31);
+        glBindTexture(GL_TEXTURE_2D, this.depthTextureID);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL14.GL_DEPTH_COMPONENT16, 1024, 1024, 0, GL_DEPTH_COMPONENT, GL_FLOAT, 0);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL12.GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL12.GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL14.GL_TEXTURE_COMPARE_FUNC, GL_LEQUAL);
+        glTexParameteri(GL_TEXTURE_2D, GL14.GL_TEXTURE_COMPARE_MODE, GL14.GL_COMPARE_R_TO_TEXTURE);
 
-        CharSequence fragment_shader = "" +
-                "#version 330 core\n" +
-                "\n" +
-                "// Interpolated values from the vertex shaders\n" +
-                "in vec3 fragmentColor;\n" +
-                "in vec2 UV;\n" +
-                "\n" +
-                "// Ouput data\n" +
-                "out vec4 color;\n" +
-                "\n" +
-                "// Values that stay constant for the whole mesh.\n" +
-                "uniform sampler2D myTextureSampler;\n" +
-                "\n" +
-                "void main(){\n" +
-                "\n" +
-                "\t// Output color = color specified in the vertex shader, \n" +
-                "\t// interpolated between all 3 surrounding vertices\n" +
-                "\tif (UV != vec2(0, 0)) {\n" +
-                "\t\tcolor = texture( myTextureSampler, UV ).rgba;\n" +
-                "\t} else {\n" +
-                "\t\tcolor = vec4(fragmentColor.x, fragmentColor.y, fragmentColor.z, 1);\n" +
-                "\t}\n" +
-                "\n" +
-                "}";
+        glFramebufferTexture(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, this.depthTextureID, 0);
 
-        VertexShader vertexShader = new VertexShader("vs", vertex_shader);
-        FragmentShader fragmentShader = new FragmentShader("fs", fragment_shader);*/
+        glDrawBuffer(GL_NONE);
+
+        if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
+            throw new RuntimeException("Framebuffer failed to initiate");
+        }
+
+        // Color Rendering
+
         VertexShader vertexShader = null;
         FragmentShader fragmentShader = null;
         try {
