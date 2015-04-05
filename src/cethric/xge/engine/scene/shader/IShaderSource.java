@@ -4,6 +4,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +17,7 @@ import static org.lwjgl.opengl.GL20.*;
  * Created by blakerogan on 18/03/15.
  */
 public abstract class IShaderSource {
-    private Logger LOGGER = LogManager.getLogger(IShaderSource.class);
+    private transient Logger LOGGER = LogManager.getLogger(IShaderSource.class);
     private String name;
     private CharSequence source;
     private int shaderID;
@@ -24,6 +28,47 @@ public abstract class IShaderSource {
     public IShaderSource(String name, CharSequence source) {
         this.name = name;
         this.source = source;
+    }
+
+    public IShaderSource(String name, File file_source) throws IOException {
+        this.name = name;
+        FileInputStream fis = null;
+        InputStreamReader isr = null;
+
+        char[] inputBuffer = null;
+        String file_content = null;
+
+        try {
+
+            if (file_source.exists()) {
+                // Probably you will get an exception if its
+                // a huge content file..
+                // I suggest you to handle content here
+                // itself, instead of
+                // returning it as return value..
+                inputBuffer = new char[(int) file_source.length()];
+
+                fis = new FileInputStream(file_source);
+
+                isr = new InputStreamReader(fis);
+                isr.read(inputBuffer);
+
+                file_content = new String(inputBuffer);
+
+                try {
+                    isr.close();
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            file_content = null;
+        }
+
+        this.source = file_content;
     }
 
     private void _compile() throws RuntimeException {

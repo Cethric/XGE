@@ -23,7 +23,7 @@ import java.nio.FloatBuffer;
  * Created by blakerogan on 14/03/15.
  */
 public class Object implements IRenderable {
-    Logger LOGGER = LogManager.getLogger(Object.class);
+    private transient Logger LOGGER = LogManager.getLogger(Object.class);
     private static int objectCount = 0;
     private String modelName = String.format("Model.%03d", objectCount);
 
@@ -34,6 +34,8 @@ public class Object implements IRenderable {
 
     private float[] modelMatrix = new float[16];
     FloatBuffer Mvp = ByteBuffer.allocateDirect(64).order(ByteOrder.nativeOrder()).asFloatBuffer();
+    FloatBuffer m = ByteBuffer.allocateDirect(64).order(ByteOrder.nativeOrder()).asFloatBuffer();
+    FloatBuffer v = ByteBuffer.allocateDirect(64).order(ByteOrder.nativeOrder()).asFloatBuffer();
 
     // Mesh Manager and mesh rendering
     private MeshManager meshManager;
@@ -72,10 +74,17 @@ public class Object implements IRenderable {
      */
     @Override
     public void render(Mat4 V, Mat4 P, ShaderProgram shaderProgram) {
-        Mat4 MVP = P.multiply(V).multiply(new Mat4(modelMatrix));
+        Mat4 M = new Mat4(modelMatrix);
+        m.put(M.getBuffer());
+        m.rewind();
+        v.put(V.getBuffer());
+        v.rewind();
+        Mat4 MVP = P.multiply(V).multiply(M);
         Mvp.put(MVP.getBuffer());
         Mvp.rewind();
         shaderProgram.usetM4F("MVP", false, Mvp);
+        shaderProgram.usetM4F("M", false, m);
+        shaderProgram.usetM4F("V", false, v);
         meshManager.render(V, P, shaderProgram);
     }
 
@@ -86,7 +95,7 @@ public class Object implements IRenderable {
     public void setup() {
         meshManager.setup();
         for (Mesh mesh : meshManager.getMeshs()) {
-            LOGGER.debug(mesh.getCollisionShape());
+            LOGGER.debug(String.format("Added %s's Collision Shape: %s to: %s", mesh.getName(), mesh.getCollisionShape(), this.modelName));
             collisionShape.addChildShape(new Transform(new Matrix4f(new Quat4f(0, 0, 0, 1), new Vector3f(0, 0, 0), 1.0f)), mesh.getCollisionShape());
         }
 

@@ -26,22 +26,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53202fef-2cdd-495e-bf3c-94cd3f4e7a3f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/shaders/shader_basic.fragmentshader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/shaders/shader_basic.vertexshader" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/shapes.blend1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/shapes/ColorTest.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/shapes/UVColor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/shapes/shapes.blend1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/shapes/shapes_plane.mtl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/shapes/shapes_plane.obj" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/BulletDebugDraw.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/BulletDebugDraw.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/camera/Camera.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/camera/Camera.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/Cube.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/Cube.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/editor/Editor$1$1.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/editor/Editor$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/editor/Editor$1.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/editor/Editor$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/editor/Editor.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/editor/Editor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/shader/FragmentShader.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/shader/FragmentShader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/shader/GeometryShader.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/shader/GeometryShader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/IMeshManager.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/IMeshManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/shader/IShaderSource.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/shader/IShaderSource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader$1.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/Mesh.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/Mesh.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/MeshManager.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/MeshManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/Object.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/Object.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/Scene.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/Scene.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/SceneManager.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/SceneManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/texture/Texture.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/texture/Texture.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/shader/VertexShader.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/shader/VertexShader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/BulletDebugDraw.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/BulletDebugDraw.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Camera.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Camera.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Cube.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Cube.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/editor/Editor.java" afterPath="$PROJECT_DIR$/src/cethric/xge/editor/Editor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/IMeshManager.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/IMeshManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/FragmentShader.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/FragmentShader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/GeometryShader.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/GeometryShader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/IShaderSource.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/IShaderSource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Mesh.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Mesh.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/MeshManager.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/MeshManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/Object.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/Object.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/SceneManager.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/SceneManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/VertexShader.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/VertexShader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="XGE.iws" />
@@ -64,36 +89,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JassimpLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java">
+      <file leaf-file-name="Editor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cethric/xge/editor/Editor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="108" column="37" selection-start-line="108" selection-start-column="37" selection-end-line="108" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.16859123">
+              <caret line="102" column="68" selection-start-line="102" selection-start-column="68" selection-end-line="102" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#update#0;class#4947:10199" expanded="false" />
-                <element signature="method#render#0;class#4947:10199" expanded="false" />
-                <element signature="method#teardown#0;class#4947:10199" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Camera.java">
+      <file leaf-file-name="JassimpLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="274" column="25" selection-start-line="274" selection-start-column="25" selection-end-line="274" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#6098#6099#0" expanded="true" />
+                <element signature="e#6172#6173#0" expanded="true" />
+                <element signature="method#setup#0;class#5708:12733" expanded="false" />
+                <element signature="method#teardown#0;class#5708:12733" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AiMesh.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/jassimp/jassimp/src/jassimp/AiMesh.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1363" column="22" selection-start-line="1363" selection-start-column="22" selection-end-line="1363" selection-end-column="22" />
+              <folding>
+                <element signature="e#13095#13096#0" expanded="true" />
+                <element signature="e#13124#13125#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mesh.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Mesh.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BulletDebugDraw.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/BulletDebugDraw.java">
+      <file leaf-file-name="GL11.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL11.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="229" selection-start-line="27" selection-start-column="229" selection-end-line="27" selection-end-column="229" />
+              <caret line="140" column="15" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GL20.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL20.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="79" column="75" selection-start-line="79" selection-start-column="64" selection-end-line="79" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,81 +174,30 @@
         <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/Object.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="134" selection-start-line="89" selection-start-column="134" selection-end-line="89" selection-end-column="134" />
-              <folding>
-                <element signature="method#update#0;class#Object#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MeshManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/MeshManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="15" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="15" />
-              <folding>
-                <element signature="e#1175#1176#0" expanded="true" />
-                <element signature="e#1211#1212#0" expanded="true" />
-                <element signature="e#1350#1351#0" expanded="true" />
-                <element signature="e#1383#1384#0" expanded="true" />
-                <element signature="method#render#0;class#MeshManager#0" expanded="false" />
-                <element signature="method#setup#0;class#MeshManager#0" expanded="false" />
-                <element signature="method#teardown#0;class#MeshManager#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IMeshManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/IMeshManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="373" column="23" selection-start-line="373" selection-start-column="23" selection-end-line="373" selection-end-column="23" />
+              <caret line="97" column="50" selection-start-line="97" selection-start-column="50" selection-end-line="97" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mesh.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Mesh.java">
+      <file leaf-file-name="Texture.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cube.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Cube.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+              <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
               <folding>
-                <element signature="e#954#955#0" expanded="true" />
+                <element signature="e#3676#3677#0" expanded="true" />
+                <element signature="e#3715#3716#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Editor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cethric/xge/editor/Editor.java">
+      <file leaf-file-name="GL13.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL13.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="74" selection-start-line="96" selection-start-column="74" selection-end-line="96" selection-end-column="74" />
+              <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -196,17 +216,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java" />
-        <option value="$PROJECT_DIR$/src/cethric/xge/editor/Editor.java" />
-        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/MeshManager.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/IMeshManager.java" />
-        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java" />
-        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/Object.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Cube.java" />
-        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Mesh.java" />
-        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java" />
-        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/BulletDebugDraw.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/SceneManager.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/MeshManager.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Camera.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/ShaderProgram.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/IShaderSource.java" />
+        <option value="$PROJECT_DIR$/src/resources/shaders/shader_basic.vs" />
+        <option value="$PROJECT_DIR$/src/resources/shaders/shader_basic_vertex.glsl" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/VertexShader.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/FragmentShader.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/GeometryShader.java" />
+        <option value="$PROJECT_DIR$/src/resources/shaders/shader_basic_fragment.glsl" />
+        <option value="$PROJECT_DIR$/src/resources/shaders/shader_basic.fragmentshader" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Mesh.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/BulletDebugDraw.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/Object.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/editor/Editor.java" />
       </list>
     </option>
   </component>
@@ -253,6 +283,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,22 +317,8 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xge" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -317,265 +336,250 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="xge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scene" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scene" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="object" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scene" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="object" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="texture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scene" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="object" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mesh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scene" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="object" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mesh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scene" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="object" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="camera" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XGE" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shapes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="textures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shapes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="objects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shaders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scene" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scene" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scene" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="object" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scene" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="object" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mesh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/com/thoughtworks/xstream/1.4.8/xstream-1.4.8-javadoc.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.GLSL" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/resources" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Editor">
     <configuration default="false" name="Specifications" type="executeSpecs" factoryName="Gauge Execution" temporary="true">
@@ -860,7 +864,7 @@
       <option name="MAIN_CLASS_NAME" value="cethric.xge.editor.Editor" />
       <option name="VM_PARAMETERS" value="-XstartOnFirstThread" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/src/resources" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -936,7 +940,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427974335740</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="UV issues are fixed, tweaked physics a little">
+      <created>1428110299009</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1428110299009</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -950,18 +960,18 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="CC Monitor" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39974293" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33161953" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3303342" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3887468" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41048592" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -986,11 +996,12 @@
     <MESSAGE value="Worked on textures, uv sets seem to be loaded wrong" />
     <MESSAGE value="Worked on textures, moved shapes tests to be inside project root" />
     <MESSAGE value="Hopefully fixed UV issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hopefully fixed UV issues" />
+    <MESSAGE value="UV issues are fixed, tweaked physics a little" />
+    <option name="LAST_COMMIT_MESSAGE" value="UV issues are fixed, tweaked physics a little" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -999,10 +1010,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/editor/Editor.java">
+    <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL13.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="74" selection-start-line="93" selection-start-column="74" selection-end-line="93" selection-end-column="74" />
+          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1013,223 +1024,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#update#0;class#4947:10199" expanded="false" />
-            <element signature="method#render#0;class#4947:10199" expanded="false" />
-            <element signature="method#teardown#0;class#4947:10199" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="194" column="31" selection-start-line="194" selection-start-column="31" selection-end-line="194" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="67" selection-start-line="40" selection-start-column="67" selection-end-line="40" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jassimp/jassimp/src/jassimp/AiMesh.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1028" column="32" selection-start-line="1028" selection-start-column="32" selection-end-line="1028" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jassimp/jassimp/src/jassimp/AiMaterial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="893" column="15" selection-start-line="893" selection-start-column="15" selection-end-line="893" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#33891#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#8224#8225#0" expanded="false" />
-            <element signature="e#8269#8270#0" expanded="false" />
-            <element signature="e#10006#10007#0" expanded="false" />
-            <element signature="e#10042#10043#0" expanded="false" />
-            <element signature="e#10330#10331#0" expanded="false" />
-            <element signature="e#10371#10372#0" expanded="false" />
-            <element signature="e#10600#10601#0" expanded="false" />
-            <element signature="e#10638#10639#0" expanded="false" />
-            <element signature="e#11058#11059#0" expanded="false" />
-            <element signature="e#11095#11096#0" expanded="false" />
-            <element signature="e#11309#11310#0" expanded="false" />
-            <element signature="e#11346#11347#0" expanded="false" />
-            <element signature="e#13506#13507#0" expanded="false" />
-            <element signature="e#13569#13570#0" expanded="false" />
-            <element signature="e#13747#13748#0" expanded="false" />
-            <element signature="e#13816#13817#0" expanded="false" />
-            <element signature="e#14498#14499#0" expanded="false" />
-            <element signature="e#14567#14568#0" expanded="false" />
-            <element signature="e#15222#15223#0" expanded="false" />
-            <element signature="e#15287#15288#0" expanded="false" />
-            <element signature="e#15482#15483#0" expanded="false" />
-            <element signature="e#15552#15553#0" expanded="false" />
-            <element signature="e#15725#15726#0" expanded="false" />
-            <element signature="e#15792#15793#0" expanded="false" />
-            <element signature="e#15974#15975#0" expanded="false" />
-            <element signature="e#16044#16045#0" expanded="false" />
-            <element signature="e#16243#16244#0" expanded="false" />
-            <element signature="e#16319#16320#0" expanded="false" />
-            <element signature="e#16503#16504#0" expanded="false" />
-            <element signature="e#16569#16570#0" expanded="false" />
-            <element signature="e#22909#22910#0" expanded="false" />
-            <element signature="e#22991#22992#0" expanded="false" />
-            <element signature="e#23200#23201#0" expanded="false" />
-            <element signature="e#23246#23247#0" expanded="false" />
-            <element signature="e#29428#29429#0" expanded="false" />
-            <element signature="e#29463#29464#0" expanded="false" />
-            <element signature="e#31154#31175#0" expanded="false" />
-            <element signature="e#33484#33485#0" expanded="false" />
-            <element signature="e#33559#33560#0" expanded="false" />
-            <element signature="e#33675#33685#0" expanded="false" />
-            <element signature="e#33842#33866#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/editor/Editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="74" selection-start-line="93" selection-start-column="74" selection-end-line="93" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#update#0;class#4947:10199" expanded="false" />
-            <element signature="method#render#0;class#4947:10199" expanded="false" />
-            <element signature="method#teardown#0;class#4947:10199" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="27" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jassimp/jassimp/src/jassimp/AiMesh.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1028" column="32" selection-start-line="1028" selection-start-column="32" selection-end-line="1028" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jassimp/jassimp/src/jassimp/AiMaterial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="893" column="15" selection-start-line="893" selection-start-column="15" selection-end-line="893" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#33891#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#8224#8225#0" expanded="false" />
-            <element signature="e#8269#8270#0" expanded="false" />
-            <element signature="e#10006#10007#0" expanded="false" />
-            <element signature="e#10042#10043#0" expanded="false" />
-            <element signature="e#10330#10331#0" expanded="false" />
-            <element signature="e#10371#10372#0" expanded="false" />
-            <element signature="e#10600#10601#0" expanded="false" />
-            <element signature="e#10638#10639#0" expanded="false" />
-            <element signature="e#11058#11059#0" expanded="false" />
-            <element signature="e#11095#11096#0" expanded="false" />
-            <element signature="e#11309#11310#0" expanded="false" />
-            <element signature="e#11346#11347#0" expanded="false" />
-            <element signature="e#13506#13507#0" expanded="false" />
-            <element signature="e#13569#13570#0" expanded="false" />
-            <element signature="e#13747#13748#0" expanded="false" />
-            <element signature="e#13816#13817#0" expanded="false" />
-            <element signature="e#14498#14499#0" expanded="false" />
-            <element signature="e#14567#14568#0" expanded="false" />
-            <element signature="e#15222#15223#0" expanded="false" />
-            <element signature="e#15287#15288#0" expanded="false" />
-            <element signature="e#15482#15483#0" expanded="false" />
-            <element signature="e#15552#15553#0" expanded="false" />
-            <element signature="e#15725#15726#0" expanded="false" />
-            <element signature="e#15792#15793#0" expanded="false" />
-            <element signature="e#15974#15975#0" expanded="false" />
-            <element signature="e#16044#16045#0" expanded="false" />
-            <element signature="e#16243#16244#0" expanded="false" />
-            <element signature="e#16319#16320#0" expanded="false" />
-            <element signature="e#16503#16504#0" expanded="false" />
-            <element signature="e#16569#16570#0" expanded="false" />
-            <element signature="e#22909#22910#0" expanded="false" />
-            <element signature="e#22991#22992#0" expanded="false" />
-            <element signature="e#23200#23201#0" expanded="false" />
-            <element signature="e#23246#23247#0" expanded="false" />
-            <element signature="e#29428#29429#0" expanded="false" />
-            <element signature="e#29463#29464#0" expanded="false" />
-            <element signature="e#31154#31175#0" expanded="false" />
-            <element signature="e#33484#33485#0" expanded="false" />
-            <element signature="e#33559#33560#0" expanded="false" />
-            <element signature="e#33675#33685#0" expanded="false" />
-            <element signature="e#33842#33866#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="194" column="31" selection-start-line="194" selection-start-column="31" selection-end-line="194" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/editor/Editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#update#0;class#4947:10199" expanded="false" />
-            <element signature="method#render#0;class#4947:10199" expanded="false" />
-            <element signature="method#teardown#0;class#4947:10199" expanded="false" />
+            <element signature="e#6098#6099#0" expanded="true" />
+            <element signature="e#6172#6173#0" expanded="true" />
+            <element signature="method#setup#0;class#5708:12733" expanded="false" />
+            <element signature="method#teardown#0;class#5708:12733" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1245,7 +1043,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1028" column="32" selection-start-line="1028" selection-start-column="32" selection-end-line="1028" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="e#13095#13096#0" expanded="true" />
+            <element signature="e#13124#13125#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1253,51 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="893" column="15" selection-start-line="893" selection-start-column="15" selection-end-line="893" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#33891#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#8224#8225#0" expanded="false" />
-            <element signature="e#8269#8270#0" expanded="false" />
-            <element signature="e#10006#10007#0" expanded="false" />
-            <element signature="e#10042#10043#0" expanded="false" />
-            <element signature="e#10330#10331#0" expanded="false" />
-            <element signature="e#10371#10372#0" expanded="false" />
-            <element signature="e#10600#10601#0" expanded="false" />
-            <element signature="e#10638#10639#0" expanded="false" />
-            <element signature="e#11058#11059#0" expanded="false" />
-            <element signature="e#11095#11096#0" expanded="false" />
-            <element signature="e#11309#11310#0" expanded="false" />
-            <element signature="e#11346#11347#0" expanded="false" />
-            <element signature="e#13506#13507#0" expanded="false" />
-            <element signature="e#13569#13570#0" expanded="false" />
-            <element signature="e#13747#13748#0" expanded="false" />
-            <element signature="e#13816#13817#0" expanded="false" />
-            <element signature="e#14498#14499#0" expanded="false" />
-            <element signature="e#14567#14568#0" expanded="false" />
-            <element signature="e#15222#15223#0" expanded="false" />
-            <element signature="e#15287#15288#0" expanded="false" />
-            <element signature="e#15482#15483#0" expanded="false" />
-            <element signature="e#15552#15553#0" expanded="false" />
-            <element signature="e#15725#15726#0" expanded="false" />
-            <element signature="e#15792#15793#0" expanded="false" />
-            <element signature="e#15974#15975#0" expanded="false" />
-            <element signature="e#16044#16045#0" expanded="false" />
-            <element signature="e#16243#16244#0" expanded="false" />
-            <element signature="e#16319#16320#0" expanded="false" />
-            <element signature="e#16503#16504#0" expanded="false" />
-            <element signature="e#16569#16570#0" expanded="false" />
-            <element signature="e#22909#22910#0" expanded="false" />
-            <element signature="e#22991#22992#0" expanded="false" />
-            <element signature="e#23200#23201#0" expanded="false" />
-            <element signature="e#23246#23247#0" expanded="false" />
-            <element signature="e#29428#29429#0" expanded="false" />
-            <element signature="e#29463#29464#0" expanded="false" />
-            <element signature="e#31154#31175#0" expanded="false" />
-            <element signature="e#33484#33485#0" expanded="false" />
-            <element signature="e#33559#33560#0" expanded="false" />
-            <element signature="e#33675#33685#0" expanded="false" />
-            <element signature="e#33842#33866#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1313,7 +1069,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1323,17 +1081,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#update#0;class#4947:10199" expanded="false" />
-            <element signature="method#render#0;class#4947:10199" expanded="false" />
-            <element signature="method#teardown#0;class#4947:10199" expanded="false" />
+            <element signature="e#6098#6099#0" expanded="true" />
+            <element signature="e#6172#6173#0" expanded="true" />
+            <element signature="method#setup#0;class#5708:12733" expanded="false" />
+            <element signature="method#teardown#0;class#5708:12733" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/SceneManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42424244">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1373,18 +1125,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL13.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.72">
-          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/java/nio/Buffer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.551447">
           <caret line="355" column="24" selection-start-line="355" selection-start-column="24" selection-end-line="355" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,116 +1140,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/ShaderProgram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="158" column="16" selection-start-line="158" selection-start-column="16" selection-end-line="158" selection-end-column="16" />
-          <folding>
-            <element signature="e#4789#4790#0" expanded="true" />
-            <element signature="e#4837#4838#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jassimp/jassimp/src/jassimp/AiMaterial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="893" column="15" selection-start-line="893" selection-start-column="15" selection-end-line="893" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#33891#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#8224#8225#0" expanded="false" />
-            <element signature="e#8269#8270#0" expanded="false" />
-            <element signature="e#10006#10007#0" expanded="false" />
-            <element signature="e#10042#10043#0" expanded="false" />
-            <element signature="e#10330#10331#0" expanded="false" />
-            <element signature="e#10371#10372#0" expanded="false" />
-            <element signature="e#10600#10601#0" expanded="false" />
-            <element signature="e#10638#10639#0" expanded="false" />
-            <element signature="e#11058#11059#0" expanded="false" />
-            <element signature="e#11095#11096#0" expanded="false" />
-            <element signature="e#11309#11310#0" expanded="false" />
-            <element signature="e#11346#11347#0" expanded="false" />
-            <element signature="e#13506#13507#0" expanded="false" />
-            <element signature="e#13569#13570#0" expanded="false" />
-            <element signature="e#13747#13748#0" expanded="false" />
-            <element signature="e#13816#13817#0" expanded="false" />
-            <element signature="e#14498#14499#0" expanded="false" />
-            <element signature="e#14567#14568#0" expanded="false" />
-            <element signature="e#15222#15223#0" expanded="false" />
-            <element signature="e#15287#15288#0" expanded="false" />
-            <element signature="e#15482#15483#0" expanded="false" />
-            <element signature="e#15552#15553#0" expanded="false" />
-            <element signature="e#15725#15726#0" expanded="false" />
-            <element signature="e#15792#15793#0" expanded="false" />
-            <element signature="e#15974#15975#0" expanded="false" />
-            <element signature="e#16044#16045#0" expanded="false" />
-            <element signature="e#16243#16244#0" expanded="false" />
-            <element signature="e#16319#16320#0" expanded="false" />
-            <element signature="e#16503#16504#0" expanded="false" />
-            <element signature="e#16569#16570#0" expanded="false" />
-            <element signature="e#22909#22910#0" expanded="false" />
-            <element signature="e#22991#22992#0" expanded="false" />
-            <element signature="e#23200#23201#0" expanded="false" />
-            <element signature="e#23246#23247#0" expanded="false" />
-            <element signature="e#29428#29429#0" expanded="false" />
-            <element signature="e#29463#29464#0" expanded="false" />
-            <element signature="e#31154#31175#0" expanded="false" />
-            <element signature="e#33484#33485#0" expanded="false" />
-            <element signature="e#33559#33560#0" expanded="false" />
-            <element signature="e#33675#33685#0" expanded="false" />
-            <element signature="e#33842#33866#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL11.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22278057">
-          <caret line="126" column="15" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jassimp/jassimp/src/jassimp/AiMesh.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="938" column="17" selection-start-line="938" selection-start-column="17" selection-end-line="938" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/editor/Editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="74" selection-start-line="96" selection-start-column="74" selection-end-line="96" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/IRenderable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23333333">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/com/bulletphysics/3.0.0.20130526/jbullet-3.0.0.20130526.jar!/com/bulletphysics/collision/shapes/CollisionShape.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4">
           <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1513,7 +1151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3529412">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1521,7 +1158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.917647">
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1529,50 +1165,208 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31764707">
           <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Cube.java">
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/SceneManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-          <folding>
-            <element signature="e#954#955#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.26666668">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/IMeshManager.java">
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/ISceneManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.23333333">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/IScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23333333">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/IRenderable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23333333">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/MeshManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="15" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.26666668">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/IMeshManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6022222">
+          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/IMesh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23333333">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Cube.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6333333">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
           <folding>
-            <element signature="e#1175#1176#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1350#1351#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
-            <element signature="method#render#0;class#MeshManager#0" expanded="false" />
-            <element signature="method#setup#0;class#MeshManager#0" expanded="false" />
-            <element signature="method#teardown#0;class#MeshManager#0" expanded="false" />
+            <element signature="e#954#955#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java">
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/XGELoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16666667">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/WavefrontLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16666667">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/jassimp/jassimp/src/jassimp/AiMaterial.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="373" column="23" selection-start-line="373" selection-start-column="23" selection-end-line="373" selection-end-column="23" />
+          <caret line="893" column="15" selection-start-line="893" selection-start-column="15" selection-end-line="893" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/ICamera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23542601">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#7738#7739#0" expanded="false" />
+            <element signature="e#7831#7832#0" expanded="false" />
+            <element signature="e#8030#8031#0" expanded="false" />
+            <element signature="e#8066#8067#0" expanded="false" />
+            <element signature="e#8232#8233#0" expanded="false" />
+            <element signature="e#8261#8262#0" expanded="false" />
+            <element signature="e#8300#8301#0" expanded="false" />
+            <element signature="e#8332#8333#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/java/io/IOException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/ShaderProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/VertexShader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47085202">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/FragmentShader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5381166">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/GeometryShader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5381166">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/shaders/shader_basic.vertexshader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16816144">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/IShaderSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/shaders/shader_basic.fragmentshader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.08139535">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL20.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="75" selection-start-line="79" selection-start-column="64" selection-end-line="79" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL13.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
+          <folding>
+            <element signature="e#3676#3677#0" expanded="true" />
+            <element signature="e#3715#3716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/BulletDebugDraw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5232558">
+          <caret line="99" column="42" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="97" column="50" selection-start-line="97" selection-start-column="50" selection-end-line="97" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -1580,47 +1374,59 @@
     <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Mesh.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/Object.java">
+    <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL11.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="134" selection-start-line="89" selection-start-column="134" selection-end-line="89" selection-end-column="134" />
-          <folding>
-            <element signature="method#update#0;class#Object#0" expanded="false" />
-          </folding>
+          <caret line="140" column="15" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="37" selection-start-line="108" selection-start-column="37" selection-end-line="108" selection-end-column="37" />
+          <caret line="274" column="25" selection-start-line="274" selection-start-column="25" selection-end-line="274" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#update#0;class#4947:10199" expanded="false" />
-            <element signature="method#render#0;class#4947:10199" expanded="false" />
-            <element signature="method#teardown#0;class#4947:10199" expanded="false" />
+            <element signature="e#6098#6099#0" expanded="true" />
+            <element signature="e#6172#6173#0" expanded="true" />
+            <element signature="method#setup#0;class#5708:12733" expanded="false" />
+            <element signature="method#teardown#0;class#5708:12733" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/BulletDebugDraw.java">
+    <entry file="file://$PROJECT_DIR$/lib/jassimp/jassimp/src/jassimp/AiMesh.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="229" selection-start-line="27" selection-start-column="229" selection-end-line="27" selection-end-column="229" />
-          <folding />
+          <caret line="1363" column="22" selection-start-line="1363" selection-start-column="22" selection-end-line="1363" selection-end-column="22" />
+          <folding>
+            <element signature="e#13095#13096#0" expanded="true" />
+            <element signature="e#13124#13125#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Camera.java">
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/editor/Editor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.16859123">
+          <caret line="102" column="68" selection-start-line="102" selection-start-column="68" selection-end-line="102" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

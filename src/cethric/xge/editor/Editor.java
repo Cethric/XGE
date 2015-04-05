@@ -5,8 +5,6 @@ import cethric.xge.engine.scene.Scene;
 import cethric.xge.engine.scene.SceneManager;
 import cethric.xge.engine.scene.object.Object;
 import cethric.xge.engine.scene.object.camera.Camera;
-import cethric.xge.engine.scene.object.mesh.Cube;
-import cethric.xge.engine.scene.object.mesh.MeshManager;
 import cethric.xge.engine.scene.object.mesh.loader.JassimpLoader;
 import cethric.xge.util.XGEUtil;
 import com.hackoeur.jglm.Vec3;
@@ -21,9 +19,6 @@ import org.lwjgl.opengl.GL11;
 import javax.vecmath.Quat4f;
 import javax.vecmath.Vector3f;
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.lang.reflect.Field;
 import java.util.Map;
 
@@ -80,6 +75,21 @@ public class Editor {
 
         Window window = new Window();
 
+        window.setSceneManager(saveToFile());
+        window.loop();
+
+        errorCallback.release();
+    }
+
+    public SceneManager loadFromFile() {
+        XStream xStream = new XStream();
+        xStream.alias("SceneManager", SceneManager.class);
+        File file = new File("../Scene.xml");
+
+        return (SceneManager) xStream.fromXML(file);
+    }
+
+    public SceneManager saveToFile() {
         SceneManager sceneManager = new SceneManager();
         Scene scene = new Scene();
         sceneManager.addScene(scene);
@@ -90,61 +100,54 @@ public class Editor {
 
         float n = 120f;
 
-        Object object1 = new Object(new Vector3f(n, 50, 0), quat4f);
-        object1.setMeshManager(JassimpLoader.loadMesh("shapes/tuna.obj"));
+        Object object1 = new Object(new Vector3f(n, 60, 0), quat4f);
+        object1.setMeshManager(JassimpLoader.loadMesh("shapes/objects/test/m_roof.fbx"));
 
-        Object object2 = new Object(new Vector3f(n, 50, n), quat4f);
-        object2.setMeshManager(JassimpLoader.loadMesh("shapes/shapes_plane.obj"));
+//        Object object2 = new Object(new Vector3f(n, 50, n), quat4f);
+//        object2.setMeshManager(JassimpLoader.loadMesh("shapes/objects/shapes_plane.obj"));
 
-        Object object3 = new Object(new Vector3f(-n, 50, n), quat4f);
-        MeshManager meshManager3 = new MeshManager();
-        meshManager3.addMesh(new Cube());
-        object3.setMeshManager(meshManager3);
+//        Object object3 = new Object(new Vector3f(-n, 60, n), quat4f);
+//        object3.setMeshManager(JassimpLoader.loadMesh("shapes/objects/test/m_track.fbx"));
 
-        Object object4 = new Object(new Vector3f(n, 50, -n), quat4f);
-        MeshManager meshManager4 = new MeshManager();
-        meshManager4.addMesh(new Cube());
-        object4.setMeshManager(meshManager4);
+//        Object object4 = new Object(new Vector3f(n, 60, -n), quat4f);
+//        object4.setMeshManager(JassimpLoader.loadMesh("shapes/objects/test/m_wall_S.fbx"));
 
-        Object object5 = new Object(new Vector3f(n, 100, n), quat4f);
-        MeshManager meshManager5 = new MeshManager();
-        meshManager5.addMesh(new Cube());
-        object5.setMeshManager(meshManager5);
+//        Object object5 = new Object(new Vector3f(n, 100, n), quat4f);
+//        MeshManager meshManager5 = new MeshManager();
+//        meshManager5.addMesh(new Cube());
+//        object5.setMeshManager(meshManager5);
 
         scene.addObject(object1);
-        scene.addObject(object2);
-        scene.addObject(object3);
-        scene.addObject(object4);
-        scene.addObject(object5);
+//        scene.addObject(object2);
+//        scene.addObject(object3);
+//        scene.addObject(object4);
+//        scene.addObject(object5);
 
         Camera camera = new Camera(new Vec3(0, 180, 0), new Vec3(0, 1, 0), 0, 0);
         camera.setActive(true);
         scene.addCamera(camera);
 
         LOGGER.debug(String.format("Camera is: %s", camera.getActive()));
+//
+//        XStream xStream = new XStream();
+//        xStream.alias("SceneManager", SceneManager.class);
+//
+//        String sceneManagerXML = xStream.toXML(sceneManager);
+//
+//        File file = new File("../Scene.xml");
+//        try {
+//            boolean b = file.createNewFile();
+//            if (b) {
+//                OutputStreamWriter outputStream = new OutputStreamWriter(new FileOutputStream(file));
+//                outputStream.write(sceneManagerXML);
+//                outputStream.close();
+//                LOGGER.info(String.format("Scene File saved to: %s", file.getAbsolutePath()));
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
-        XStream xStream = new XStream();
-        xStream.alias("SceneManager", SceneManager.class);
-
-        String sceneManagerXML = xStream.toXML(sceneManager);
-
-        File file = new File("../Scene.xml");
-        try {
-            boolean b = file.createNewFile();
-            if (b) {
-                OutputStreamWriter outputStream = new OutputStreamWriter(new FileOutputStream(file));
-                outputStream.write(sceneManagerXML);
-                outputStream.close();
-                LOGGER.info(String.format("Scene File saved to: %s", file.getAbsolutePath()));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        window.setSceneManager(sceneManager);
-        window.loop();
-
-        errorCallback.release();
+        return sceneManager;
     }
 
     public static void main(String[] args) {

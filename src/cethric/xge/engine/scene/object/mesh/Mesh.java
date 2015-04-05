@@ -1,5 +1,6 @@
 package cethric.xge.engine.scene.object.mesh;
 
+import cethric.xge.engine.scene.object.texture.Texture;
 import cethric.xge.engine.scene.shader.ShaderProgram;
 import com.bulletphysics.collision.shapes.BoxShape;
 import com.bulletphysics.collision.shapes.CollisionShape;
@@ -16,6 +17,11 @@ public abstract class Mesh implements IMesh {
 
     //Physics
     private CollisionShape collisionShape;
+
+    //Textures
+    public Texture textureSpec;
+    public Texture textureNorm;
+    public Texture textureDiff;
 
     public Mesh() {
         meshCount++;

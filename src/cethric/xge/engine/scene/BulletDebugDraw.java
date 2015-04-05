@@ -24,7 +24,7 @@ import static org.lwjgl.opengl.GL30.glGenVertexArrays;
  * Created by blakerogan on 14/03/15.
  */
 public class BulletDebugDraw extends IDebugDraw {
-    private Logger LOGGER = LogManager.getLogger(BulletDebugDraw.class);
+    private transient Logger LOGGER = LogManager.getLogger(BulletDebugDraw.class);
     private int debugMode = DebugDrawModes.DRAW_WIREFRAME | DebugDrawModes.DRAW_CONTACT_POINTS | DebugDrawModes.DRAW_TEXT | DebugDrawModes.DRAW_FEATURES_TEXT | DebugDrawModes.PROFILE_TIMINGS | DebugDrawModes.ENABLE_SAT_COMPARISON | DebugDrawModes.DRAW_AABB;
     @Override
     public void drawLine(Vector3f from, Vector3f to, Vector3f color) {
@@ -92,12 +92,12 @@ public class BulletDebugDraw extends IDebugDraw {
 
     @Override
     public void reportErrorWarning(String warningString) {
-        LOGGER.debug(warningString);
+        LOGGER.debug(String.format("BULLET WARNING: %s", warningString));
     }
 
     @Override
     public void draw3dText(Vector3f location, String textString) {
-        LOGGER.debug(textString);
+        LOGGER.debug(String.format("BULLET TEXT: %s", textString));
     }
 
     @Override

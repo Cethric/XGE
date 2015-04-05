@@ -23,7 +23,7 @@ import java.util.Arrays;
  * Created by blakerogan on 15/03/15.
  */
 public class Camera implements ICamera {
-    private Logger LOGGER = LogManager.getLogger(Camera.class);
+    private transient Logger LOGGER = LogManager.getLogger(Camera.class);
 
     private boolean active = false;
     private Vec3 position;

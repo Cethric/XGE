@@ -1,10 +1,10 @@
 package cethric.xge.engine.scene;
 
-import cethric.xge.engine.scene.shader.FragmentShader;
-import cethric.xge.engine.scene.shader.VertexShader;
 import cethric.xge.engine.scene.object.Object;
 import cethric.xge.engine.scene.object.camera.Camera;
+import cethric.xge.engine.scene.shader.FragmentShader;
 import cethric.xge.engine.scene.shader.ShaderProgram;
+import cethric.xge.engine.scene.shader.VertexShader;
 import com.bulletphysics.collision.broadphase.DbvtBroadphase;
 import com.bulletphysics.collision.dispatch.CollisionDispatcher;
 import com.bulletphysics.collision.dispatch.DefaultCollisionConfiguration;
@@ -24,6 +24,8 @@ import org.apache.logging.log4j.Logger;
 import javax.vecmath.Matrix4f;
 import javax.vecmath.Quat4f;
 import javax.vecmath.Vector3f;
+import java.io.File;
+import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
@@ -36,7 +38,7 @@ import static org.lwjgl.opengl.GL11.*;
  * Created by blakerogan on 14/03/15.
  */
 public class Scene implements IScene {
-    private Logger LOGGER = LogManager.getLogger(Scene.class);
+    private transient Logger LOGGER = LogManager.getLogger(Scene.class);
     private static int sceneCount = 0;
     private boolean active = false;
     private boolean registered = false;
@@ -78,6 +80,8 @@ public class Scene implements IScene {
     @Override
     public void render() {
         shaderProgram.install();
+
+        shaderProgram.uset3F("LightPosition_worldspace", 50, 50, 0);
 
         sceneManager.render();
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
@@ -148,7 +152,7 @@ public class Scene implements IScene {
 
         dynamicsWorld.setDebugDrawer(new BulletDebugDraw());
 
-        CharSequence vertex_shader = "" +
+/*        CharSequence vertex_shader = "" +
                 "#version 330 core\n" +
                 "\n" +
                 "// Input vertex data, different for all executions of this shader.\n" +
@@ -201,7 +205,15 @@ public class Scene implements IScene {
                 "}";
 
         VertexShader vertexShader = new VertexShader("vs", vertex_shader);
-        FragmentShader fragmentShader = new FragmentShader("fs", fragment_shader);
+        FragmentShader fragmentShader = new FragmentShader("fs", fragment_shader);*/
+        VertexShader vertexShader = null;
+        FragmentShader fragmentShader = null;
+        try {
+            vertexShader = new VertexShader("vs", new File("shaders/shader_basic.vertexshader"));
+            fragmentShader = new FragmentShader("fs", new File("shaders/shader_basic.fragmentshader"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         this.shaderProgram = new ShaderProgram(vertexShader, fragmentShader, null);
         this.shaderProgram.link();
 
@@ -211,6 +223,11 @@ public class Scene implements IScene {
 
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+//        glEnable(GL_CULL_FACE);
+//        glCullFace(GL_BACK);
+
+        glEnable(GL_TEXTURE_2D);
     }
 
     /**

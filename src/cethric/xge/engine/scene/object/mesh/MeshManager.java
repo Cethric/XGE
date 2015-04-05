@@ -12,7 +12,7 @@ import java.util.List;
  * Created by blakerogan on 21/03/15.
  */
 public class MeshManager implements IMeshManager {
-    private Logger LOGGER = LogManager.getLogger(MeshManager.class);
+    private transient Logger LOGGER = LogManager.getLogger(MeshManager.class);
 
     private List<Mesh> meshs = new ArrayList<Mesh>();
 

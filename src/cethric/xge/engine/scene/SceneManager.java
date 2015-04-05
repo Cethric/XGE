@@ -10,7 +10,7 @@ import java.util.List;
  * Created by blakerogan on 14/03/15.
  */
 public class SceneManager implements ISceneManager {
-    private Logger LOGGER = LogManager.getLogger(SceneManager.class);
+    private transient Logger LOGGER = LogManager.getLogger(SceneManager.class);
 
     private List<Scene> scenes = new ArrayList<Scene>();
 

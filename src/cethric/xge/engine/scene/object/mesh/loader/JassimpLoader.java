@@ -33,7 +33,7 @@ import static org.lwjgl.opengl.GL30.glGenVertexArrays;
  * Created by blakerogan on 21/03/15.
  */
 public class JassimpLoader {
-    private static Logger LOGGER = LogManager.getLogger(JassimpLoader.class);
+    private transient static Logger LOGGER = LogManager.getLogger(JassimpLoader.class);
     public JassimpLoader() {
         // Nothing to do here
     }
@@ -47,6 +47,7 @@ public class JassimpLoader {
             for (AiMesh mesh : meshList) {
                 final int size = mesh.getNumVertices() * 3;
                 final FloatBuffer g_vertex_buffer_data = ByteBuffer.allocateDirect(size * Float.BYTES).order(ByteOrder.nativeOrder()).asFloatBuffer();
+                final FloatBuffer g_normal_buffer_data = ByteBuffer.allocateDirect(size * Float.BYTES).order(ByteOrder.nativeOrder()).asFloatBuffer();
                 final FloatBuffer g_color_buffer_data = ByteBuffer.allocateDirect(size * Float.BYTES).order(ByteOrder.nativeOrder()).asFloatBuffer();
                 List<Float> uv_data = new ArrayList<Float>();
 
@@ -54,12 +55,12 @@ public class JassimpLoader {
 
                 int faces = mesh.getNumFaces();
                 AiMaterial material = materialList.get(mesh.getMaterialIndex());
-                String matFile = material.getTextureFile(AiTextureType.DIFFUSE, 0);
-                final Texture texture = new Texture(new File(matFile));
                 for (int face = 0; face < faces; face++) {
                     int faceIndexSize = mesh.getFaceNumIndices(face);
                     for (int index = 0; index < faceIndexSize; index++) {
                         int vertIndex = mesh.getFaceVertex(face, index);
+
+                        // Vertex
                         AiWrapperProvider wrapperProvider = Jassimp.getWrapperProvider();
                         AiVector vector = (AiVector) mesh.getWrappedPosition(vertIndex, wrapperProvider);
                         float x, y, z;
@@ -71,23 +72,40 @@ public class JassimpLoader {
                         g_vertex_buffer_data.put(y);
                         g_vertex_buffer_data.put(z);
                         convexHullShape.addPoint(new Vector3f(x,y,z));
+//                        LOGGER.debug(String.format("X: %s Y: %s Z: %s", x, y, z));
 
-                        LOGGER.debug(String.format("X: %s Y: %s Z: %s", x, y, z));
+                        //Normal
+                        AiVector normal = (AiVector) mesh.getWrappedNormal(vertIndex, wrapperProvider);
+                        float nx, ny, nz;
+                        nx = normal.getX();
+                        ny = normal.getY();
+                        nz = normal.getZ();
 
+                        g_normal_buffer_data.put(nx);
+                        g_normal_buffer_data.put(ny);
+                        g_normal_buffer_data.put(nz);
+
+//                        LOGGER.debug(String.format("NX: %s NY: %s NZ: %s", nx, ny, nz));
+
+                        //Texture Coordinates
                         float u, v;
                         try {
-                            u = mesh.getTexCoordU(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0)); //uvCoords.getX();
+                            u = mesh.getTexCoordU(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0));
                         } catch (IndexOutOfBoundsException e) {
+                            u = 0.1f;
+                        } catch (IllegalStateException e) {
                             u = 0.1f;
                         }
                         try {
-                            v = mesh.getTexCoordV(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0)); //uvCoords.getY();
+                            v = mesh.getTexCoordV(vertIndex, material.getTextureUVIndex(AiTextureType.DIFFUSE, 0));
                         } catch (IndexOutOfBoundsException e) {
+                            v = 0.1f;
+                        } catch (IllegalStateException e) {
                             v = 0.1f;
                         }
                         uv_data.add(u);
                         uv_data.add(1-v);
-                        LOGGER.debug(String.format("U: %f V: %f", u, 1-v));
+//                        LOGGER.debug(String.format("U: %f V: %f", u, 1-v));
 
                         g_color_buffer_data.put(new Random().nextFloat());
                         g_color_buffer_data.put(new Random().nextFloat());
@@ -103,10 +121,10 @@ public class JassimpLoader {
                 }
                 g_uv_buffer_data.rewind();
 
-                LOGGER.debug(g_vertex_buffer_data);
-
                 Mesh fMesh = new Mesh() {
+                    public Texture specTexture;
                     int vertexbuffer;
+                    int normalbuffer;
                     int colorbuffer;
                     int uvbuffer;
 
@@ -136,8 +154,22 @@ public class JassimpLoader {
                      */
                     @Override
                     public void render(Mat4 V, Mat4 P, ShaderProgram shaderProgram) {
-                        texture.bind();
-                        shaderProgram.uset1I("myTextureSampler", 1);
+                        if (textureDiff != null) {
+                            textureDiff.bind();
+                            shaderProgram.uset1I("DiffuseTexture", textureDiff.getTextureUnit());
+//                            System.out.printf("DiffuseTexture %d%n", textureDiff.getTextureUnit());
+                        }
+                        if (textureNorm != null) {
+                            textureNorm.bind();
+                            shaderProgram.uset1I("NormalTexture", textureNorm.getTextureUnit());
+                            System.out.println("NormalTexture");
+                        }
+                        if (textureSpec != null) {
+                            textureSpec.bind();
+                            shaderProgram.uset1I("SpecTexture", textureSpec.getTextureUnit());
+                            System.out.println("SpecTexture");
+                        }
+
                         glEnableVertexAttribArray(0);
                         glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
                         glVertexAttribPointer(
@@ -150,11 +182,11 @@ public class JassimpLoader {
                         );
 
                         glEnableVertexAttribArray(1);
-                        glBindBuffer(GL_ARRAY_BUFFER, colorbuffer);
+                        glBindBuffer(GL_ARRAY_BUFFER, normalbuffer);
                         glVertexAttribPointer(
-                                1,                                // attribute. No particular reason for 1, but must match the layout in the shader.
+                                3,                                // attribute. No particular reason for 1, but must match the layout in the shader.
                                 3,                                // size
-                                GL_FLOAT,                         // type
+                                GL11.GL_FLOAT,                         // type
                                 false,                         // normalized?
                                 0,                                // stride
                                 0                         // array buffer offset
@@ -170,6 +202,17 @@ public class JassimpLoader {
                                 0,                                // stride
                                 0                         // array buffer offset
                         );
+
+                        glBindBuffer(GL_ARRAY_BUFFER, colorbuffer);
+                        glVertexAttribPointer(
+                                1,                                // attribute. No particular reason for 1, but must match the layout in the shader.
+                                3,                                // size
+                                GL_FLOAT,                         // type
+                                false,                         // normalized?
+                                0,                                // stride
+                                0                         // array buffer offset
+                        );
+
 
                         // Draw the triangle !
 
@@ -194,6 +237,10 @@ public class JassimpLoader {
                         glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
                         glBufferData(GL_ARRAY_BUFFER, g_vertex_buffer_data, GL_STATIC_DRAW);
 
+                        normalbuffer = glGenBuffers();
+                        glBindBuffer(GL_ARRAY_BUFFER, normalbuffer);
+                        glBufferData(GL_ARRAY_BUFFER, g_normal_buffer_data, GL_STATIC_DRAW);
+
                         colorbuffer = glGenBuffers();
                         glBindBuffer(GL_ARRAY_BUFFER, colorbuffer);
                         glBufferData(GL_ARRAY_BUFFER, g_color_buffer_data, GL_STATIC_DRAW);
@@ -214,6 +261,33 @@ public class JassimpLoader {
 
                     }
                 };
+                if (material.getNumTextures(AiTextureType.DIFFUSE) > 0) {
+                    String diffFile = material.getTextureFile(AiTextureType.DIFFUSE, 0);
+                    try {
+                        fMesh.textureDiff = Texture.LoadTexture(new File(diffFile), AiTextureType.DIFFUSE);
+                    } catch (Exception e) {
+                        continue;
+                    }
+                }
+                if (material.getNumTextures(AiTextureType.SPECULAR) > 0) {
+                    String specFile = material.getTextureFile(AiTextureType.SPECULAR, 0);
+                    System.out.println(specFile);
+                    try {
+                        fMesh.textureSpec = Texture.LoadTexture(new File(specFile), AiTextureType.SPECULAR);
+                    } catch (Exception e) {
+                        continue;
+                    }
+                }
+                if (material.getNumTextures(AiTextureType.NORMALS) > 0) {
+                    String normFile = material.getTextureFile(AiTextureType.NORMALS, 0);
+                    System.out.println(normFile);
+                    try {
+                        fMesh.textureNorm = Texture.LoadTexture(new File(normFile), AiTextureType.NORMALS);
+                    } catch (Exception e) {
+                        continue;
+                    }
+                }
+                fMesh.setName('"' + new File(filePath).getName() + mesh.getName() + '"');
                 meshManager.addMesh(fMesh);
 
             }
