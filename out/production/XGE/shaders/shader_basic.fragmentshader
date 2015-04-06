@@ -12,7 +12,7 @@ out vec4 color;
 uniform sampler2D DiffuseTexture;
 uniform sampler2D NormalTexture;
 uniform sampler2D SpecTexture;
-uniform sampler2DShadow shadowMap;
+uniform sampler2D shadowMap;
 uniform mat4 MV;
 
 vec4 diffuseColor() {
@@ -42,9 +42,16 @@ void main() {
     
     // Do Shadows
     vec3 lightColor = vec3(1, 1, 1);
-    float shadowAmount = texture(shadowMap, vec3(ShadowCoord.xy, (ShadowCoord.z)/ShadowCoord.w)); //max(0.5, texture(shadowMap, vec3(ShadowCoord.xy, (ShadowCoord.z)/ShadowCoord.w)));
+    float shadow = 1.0;
+    vec4 shadowCoordinateWdivide = ShadowCoord / ShadowCoord.w;
+    shadowCoordinateWdivide.z += 0.0005;
+    float distanceFromLight = texture(shadowMap, shadowCoordinateWdivide.st).z;
     
-    color.rgb = MaterialColor * lightColor * shadowAmount;
+    if (ShadowCoord.w > 0.0) {
+        shadow = distanceFromLight < shadowCoordinateWdivide.z ? 0.0 : 0.5;
+    }
+    
+    color.rgb = MaterialColor * shadow;
         
     color.a = diffuseColor().a;
 }

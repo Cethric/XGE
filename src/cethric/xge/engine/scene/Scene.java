@@ -23,7 +23,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.GL12;
 import org.lwjgl.opengl.GL13;
-import org.lwjgl.opengl.GL14;
 
 import javax.vecmath.Matrix4f;
 import javax.vecmath.Quat4f;
@@ -40,7 +39,6 @@ import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL13.GL_TEXTURE31;
 import static org.lwjgl.opengl.GL13.glActiveTexture;
 import static org.lwjgl.opengl.GL30.*;
-import static org.lwjgl.opengl.GL32.glFramebufferTexture;
 
 /**
  * Created by blakerogan on 14/03/15.
@@ -92,14 +90,14 @@ public class Scene implements IScene {
     public void render(int width, int height) {
         glBindFramebuffer(GL_FRAMEBUFFER, this.framebuffer);
         glViewport(0, 0, 1024, 1024);
-        glEnable(GL_CULL_FACE);
-        glCullFace(GL_BACK);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+//        glEnable(GL_CULL_FACE);
+//        glCullFace(GL_FRONT);
+        glClear(GL_DEPTH_BUFFER_BIT);
+        glColorMask(false, false, false, false);
         this.depthShader.install();
 //        Mat4 depthProjectionMatrix = Matrices.ortho(-10, 10, -10, 10, -10, 20);
-        Mat4 depthProjectionMatrix = Matrices.perspective(45.0f, 1.0f, 0.01f, 10000f);
-//        Mat4 depthViewMatrix = Matrices.lookAt(new Vec3(0.5f, 2.0f, 2.0f), new Vec3(0, 0, 0), new Vec3(0, 1, 0));
-        Light test = new Light(new Vec3(10, 700, 0), new Vec3(0, 1, 0), 0, -82f);
+        Mat4 depthProjectionMatrix = Matrices.perspective(45.0f, 1f, 2f, 10000f);
+        Light test = new Light(new Vec3(-800, 900, 0), new Vec3(0, 1, 0), 0, -45f);
         test.update(0l);
         Mat4 depthViewMatrix = test.getView();
         Mat4 depthModelMatrix = Mat4.MAT4_IDENTITY;
@@ -116,9 +114,10 @@ public class Scene implements IScene {
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         glViewport(0, 0, width, height);
 
-        glEnable(GL_CULL_FACE);
-        glCullFace(GL_BACK);
+        glDisable(GL_CULL_FACE);
+//        glCullFace(GL_NONE);
 
+        glColorMask(true, true, true, true);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
         shaderProgram.install();
@@ -218,29 +217,35 @@ public class Scene implements IScene {
         }
         this.depthShader = new ShaderProgram(depthVertexShader, depthFragmentShader, null);
         this.depthShader.link();
-        
-        this.framebuffer = glGenFramebuffers();
-        glBindFramebuffer(GL_FRAMEBUFFER, this.framebuffer);
 
         // Setup the depth texture
         this.depthTextureID = glGenTextures();
         glActiveTexture(GL13.GL_TEXTURE31);
         glBindTexture(GL_TEXTURE_2D, this.depthTextureID);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL14.GL_DEPTH_COMPONENT16, 1024, 1024, 0, GL_DEPTH_COMPONENT, GL_FLOAT, 0);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL12.GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL12.GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_2D, GL14.GL_TEXTURE_COMPARE_FUNC, GL_LEQUAL);
-        glTexParameteri(GL_TEXTURE_2D, GL14.GL_TEXTURE_COMPARE_MODE, GL14.GL_COMPARE_R_TO_TEXTURE);
+//        glTexParameteri(GL_TEXTURE_2D, GL14.GL_TEXTURE_COMPARE_FUNC, GL_LEQUAL);
+//        glTexParameteri(GL_TEXTURE_2D, GL14.GL_TEXTURE_COMPARE_MODE, GL14.GL_COMPARE_R_TO_TEXTURE);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, 1024, 1024, 0, GL_DEPTH_COMPONENT, GL_UNSIGNED_BYTE, 0);
 
-        glFramebufferTexture(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, this.depthTextureID, 0);
+        glBindTexture(GL_TEXTURE_2D, 0);
+
+        // Setup Frame buffer
+        this.framebuffer = glGenFramebuffers();
+        glBindFramebuffer(GL_FRAMEBUFFER, this.framebuffer);
 
         glDrawBuffer(GL_NONE);
+        glReadBuffer(GL_NONE);
+
+        glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, this.depthTextureID, 0);
 
         if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
             throw new RuntimeException("Framebuffer failed to initiate");
         }
+
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
         // Color Rendering
 

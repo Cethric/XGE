@@ -1,5 +1,7 @@
 package cethric.xge.engine.scene.object.camera;
 
+import cethric.xge.engine.scene.object.mesh.Cube;
+import cethric.xge.engine.scene.object.mesh.Mesh;
 import com.hackoeur.jglm.Mat4;
 import com.hackoeur.jglm.Matrices;
 import com.hackoeur.jglm.Vec3;
@@ -21,6 +23,8 @@ public class Light implements ICamera {
     private float yaw;
     private float pitch;
 
+    private Mesh cameraMesh;
+
     public Light(Vec3 position, Vec3 up, float yaw, float pitch) {
         front = new Vec3(0, 0, -1);
         this.position = position;
@@ -28,6 +32,7 @@ public class Light implements ICamera {
         this.yaw = yaw;
         this.pitch = pitch;
         update(0l);
+        cameraMesh = new Cube();
     }
     /**
      * called on every frame update

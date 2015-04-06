@@ -26,34 +26,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53202fef-2cdd-495e-bf3c-94cd3f4e7a3f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Light.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cethric/xge/util/MeshUtil.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/ColorTest.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/shapes.blend" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/shapes_plane.mtl" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/editor/Editor$1$1.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/editor/Editor$1$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/editor/Editor$1.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/editor/Editor$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/editor/Editor.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/editor/Editor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/IScene.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/IScene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/ISceneManager.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/ISceneManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader$1.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/Scene.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/Scene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/SceneManager.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/scene/SceneManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/Window.class" afterPath="$PROJECT_DIR$/out/production/XGE/cethric/xge/engine/Window.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/editor/Editor.java" afterPath="$PROJECT_DIR$/src/cethric/xge/editor/Editor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/IScene.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/IScene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/ISceneManager.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/ISceneManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Light.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Light.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/scene/SceneManager.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/scene/SceneManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cethric/xge/engine/Window.java" afterPath="$PROJECT_DIR$/src/cethric/xge/engine/Window.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/resources/shaders/shader_basic.fragmentshader" afterPath="$PROJECT_DIR$/out/production/XGE/resources/shaders/shader_basic.fragmentshader" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/shaders/shader_basic.fragmentshader" afterPath="$PROJECT_DIR$/out/production/XGE/shaders/shader_basic.fragmentshader" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/shaders/shader_basic.fragmentshader" afterPath="$PROJECT_DIR$/src/resources/shaders/shader_basic.fragmentshader" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/resources/shaders/shader_basic.vertexshader" afterPath="$PROJECT_DIR$/out/production/XGE/resources/shaders/shader_basic.vertexshader" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XGE/shaders/shader_basic.vertexshader" afterPath="$PROJECT_DIR$/out/production/XGE/shaders/shader_basic.vertexshader" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/shaders/shader_basic.vertexshader" afterPath="$PROJECT_DIR$/src/resources/shaders/shader_basic.vertexshader" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="XGE.iws" />
@@ -89,41 +71,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java">
+      <file leaf-file-name="Editor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cethric/xge/editor/Editor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26914153">
-              <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="134" column="45" selection-start-line="134" selection-start-column="45" selection-end-line="134" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2534#2542#0" expanded="true" />
-                <element signature="e#2594#2602#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mat4.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/com/hackoeur/jglm/1.0.0/jglm-1.0.0-sources.jar!/com/hackoeur/jglm/Mat4.java">
+      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+              <caret line="243" column="79" selection-start-line="243" selection-start-column="79" selection-end-line="243" selection-end-column="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Window.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/Window.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.51724136">
+              <caret line="567" column="53" selection-start-line="567" selection-start-column="27" selection-end-line="567" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Camera.java">
+      <file leaf-file-name="GL30.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL30.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="235" column="8" selection-start-line="235" selection-start-column="8" selection-end-line="235" selection-end-column="29" />
-              <folding>
-                <element signature="e#7738#7739#0" expanded="true" />
-                <element signature="e#7831#7832#0" expanded="true" />
-                <element signature="e#8030#8031#0" expanded="true" />
-                <element signature="e#8066#8067#0" expanded="true" />
-              </folding>
+              <caret line="2459" column="23" selection-start-line="2459" selection-start-column="23" selection-end-line="2459" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,9 +119,11 @@
         <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Light.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="27" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+              <caret line="34" column="29" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2206#2207#0" expanded="true" />
+                <element signature="e#2240#2241#0" expanded="true" />
                 <element signature="method#mousePress#0;class#Light#0" expanded="false" />
                 <element signature="method#mouseRelease#0;class#Light#0" expanded="false" />
                 <element signature="method#mouseMove#0;class#Light#0" expanded="false" />
@@ -146,21 +135,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GL30.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL30.java">
+      <file leaf-file-name="GL11.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL11.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2411" column="22" selection-start-line="2411" selection-start-column="22" selection-end-line="2411" selection-end-column="22" />
+              <caret line="2854" column="23" selection-start-line="2854" selection-start-column="23" selection-end-line="2854" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GL11.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL11.java">
+      <file leaf-file-name="Cube.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Cube.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10633" column="23" selection-start-line="10633" selection-start-column="23" selection-end-line="10633" selection-end-column="23" />
+              <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -225,12 +214,12 @@
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/Object.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/util/MeshUtil.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/loader/JassimpLoader.java" />
-        <option value="$PROJECT_DIR$/src/cethric/xge/editor/Editor.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/IScene.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/ISceneManager.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/SceneManager.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/Window.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Light.java" />
+        <option value="$PROJECT_DIR$/src/cethric/xge/editor/Editor.java" />
         <option value="$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java" />
       </list>
     </option>
@@ -253,7 +242,7 @@
     <option name="x" value="1366" />
     <option name="y" value="23" />
     <option name="width" value="1600" />
-    <option name="height" value="873" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -278,7 +267,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -660,11 +651,13 @@
               <option name="myItemId" value="xge" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1053,12 +1046,18 @@
       <option name="project" value="LOCAL" />
       <updated>1428110299009</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Shadow mapping tests">
+      <created>1428227390866</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1428227390866</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="23" width="1600" height="873" extended-state="6" />
-    <editor active="true" />
+    <frame x="1366" y="23" width="1600" height="877" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1067,22 +1066,22 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="CC Monitor" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39974293" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3303342" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41002572" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41002572" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39974293" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3303342" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1104,7 +1103,8 @@
     <MESSAGE value="Worked on textures, moved shapes tests to be inside project root" />
     <MESSAGE value="Hopefully fixed UV issues" />
     <MESSAGE value="UV issues are fixed, tweaked physics a little" />
-    <option name="LAST_COMMIT_MESSAGE" value="UV issues are fixed, tweaked physics a little" />
+    <MESSAGE value="Shadow mapping tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shadow mapping tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1117,13 +1117,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/ShaderProgram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/shader/VertexShader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47085202">
@@ -1170,14 +1163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="79" column="75" selection-start-line="79" selection-start-column="64" selection-end-line="79" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#151127#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#15544#15545#0" expanded="false" />
-            <element signature="e#15585#15586#0" expanded="false" />
-            <element signature="e#145403#145404#0" expanded="false" />
-            <element signature="e#145460#145461#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1185,12 +1170,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#93637#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#13394#13395#0" expanded="false" />
-            <element signature="e#13435#13436#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1205,7 +1184,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,10 +1191,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1363" column="22" selection-start-line="1363" selection-start-column="22" selection-end-line="1363" selection-end-column="22" />
-          <folding>
-            <element signature="e#13095#13096#0" expanded="false" />
-            <element signature="e#13124#13125#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1224,7 +1198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1232,7 +1205,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6">
           <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,11 +1212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#464#474#0" expanded="true" />
-            <element signature="e#526#535#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1252,15 +1219,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding>
-            <element signature="method#aabbExpand#0;class#AabbUtil2#0" expanded="false" />
-            <element signature="method#outcode#0;class#AabbUtil2#0" expanded="false" />
-            <element signature="method#rayAabb#0;class#AabbUtil2#0" expanded="false" />
-            <element signature="method#testAabbAgainstAabb2#0;class#AabbUtil2#0" expanded="false" />
-            <element signature="method#testTriangleAgainstAabb2#0;class#AabbUtil2#0" expanded="false" />
-            <element signature="method#transformAabb#0;class#AabbUtil2#0" expanded="false" />
-            <element signature="method#transformAabb#1;class#AabbUtil2#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1268,7 +1226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4">
           <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1276,7 +1233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4">
           <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1284,7 +1240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4">
           <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1292,7 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6">
           <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1300,7 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1308,7 +1261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14778325">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1316,7 +1268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14778325">
           <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1324,7 +1275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14778325">
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1332,7 +1282,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4">
           <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1340,7 +1289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="51" selection-start-line="0" selection-start-column="51" selection-end-line="0" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1348,7 +1296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14778325">
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1356,7 +1303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14778325">
           <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1364,7 +1310,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14778325">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1372,7 +1317,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35221675">
           <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1380,7 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.6">
           <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1388,7 +1331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.92">
           <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,7 +1338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1410,12 +1351,93 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/editor/Editor.java">
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/SceneManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6171694">
+          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/ISceneManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34802786">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/IScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38283062">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/com/hackoeur/jglm/1.0.0/jglm-1.0.0-sources.jar!/com/hackoeur/jglm/Mat4.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="111" column="79" selection-start-line="111" selection-start-column="79" selection-end-line="111" selection-end-column="79" />
+          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/shaders/OpenGL_Tutorial/DepthRTT.vertexshader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/shaders/OpenGL_Tutorial/DepthRTT.fragmentshader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="235" column="8" selection-start-line="235" selection-start-column="8" selection-end-line="235" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="29" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/mesh/Cube.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Light.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2240#2241#0" expanded="true" />
+            <element signature="method#mousePress#0;class#Light#0" expanded="false" />
+            <element signature="method#mouseRelease#0;class#Light#0" expanded="false" />
+            <element signature="method#mouseMove#0;class#Light#0" expanded="false" />
+            <element signature="method#mouseScroll#0;class#Light#0" expanded="false" />
+            <element signature="method#keyPress#0;class#Light#0" expanded="false" />
+            <element signature="method#keyRelease#0;class#Light#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1431,10 +1453,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/editor/Editor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="134" column="45" selection-start-line="134" selection-start-column="45" selection-end-line="134" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL11.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10633" column="23" selection-start-line="10633" selection-start-column="23" selection-end-line="10633" selection-end-column="23" />
+          <caret line="2854" column="23" selection-start-line="2854" selection-start-column="23" selection-end-line="2854" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1442,121 +1474,26 @@
     <entry file="jar://$PROJECT_DIR$/lib/org/lwjgl/3.0.0a/src.zip!/org/lwjgl/opengl/GL30.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2411" column="22" selection-start-line="2411" selection-start-column="22" selection-end-line="2411" selection-end-column="22" />
+          <caret line="2459" column="23" selection-start-line="2459" selection-start-column="23" selection-end-line="2459" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/texture/Texture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34802786">
-          <caret line="371" column="0" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/SceneManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6171694">
-          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/ISceneManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34802786">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/IScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38283062">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/com/hackoeur/jglm/1.0.0/jglm-1.0.0-sources.jar!/com/hackoeur/jglm/Mat4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/shaders/OpenGL_Tutorial/DepthRTT.vertexshader">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/shaders/OpenGL_Tutorial/DepthRTT.fragmentshader">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="79" column="29" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Light.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="27" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#mousePress#0;class#Light#0" expanded="false" />
-            <element signature="method#mouseRelease#0;class#Light#0" expanded="false" />
-            <element signature="method#mouseMove#0;class#Light#0" expanded="false" />
-            <element signature="method#mouseScroll#0;class#Light#0" expanded="false" />
-            <element signature="method#keyPress#0;class#Light#0" expanded="false" />
-            <element signature="method#keyRelease#0;class#Light#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/object/camera/Camera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="235" column="8" selection-start-line="235" selection-start-column="8" selection-end-line="235" selection-end-column="29" />
-          <folding>
-            <element signature="e#7738#7739#0" expanded="true" />
-            <element signature="e#7831#7832#0" expanded="true" />
-            <element signature="e#8030#8031#0" expanded="true" />
-            <element signature="e#8066#8067#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/scene/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26914153">
-          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="243" column="79" selection-start-line="243" selection-start-column="79" selection-end-line="243" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2534#2542#0" expanded="true" />
-            <element signature="e#2594#2602#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cethric/xge/engine/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.51724136">
+          <caret line="567" column="53" selection-start-line="567" selection-start-column="27" selection-end-line="567" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
