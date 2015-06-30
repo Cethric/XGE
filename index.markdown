@@ -46,3 +46,4 @@ If you are using IntelliJ Idea select the appropriate platform "Editor"
 
 ####This is a experimental game engine and should not be used for major projects.
 ####USE AT YOUR OWN RISK.
+###THIS PROJECT IS DEAD UNTIL FURTHER NOTICE
