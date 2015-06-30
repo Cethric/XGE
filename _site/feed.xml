@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTMLEditor Pythonista</title>
+    <description>Yet to write a description
+</description>
+    <link>http://Cethric.github.io//HTMLEditor-Pythonista//</link>
+    <atom:link href="http://Cethric.github.io//HTMLEditor-Pythonista//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 30 Jun 2015 16:06:23 +1000</pubDate>
+    <lastBuildDate>Tue, 30 Jun 2015 16:06:23 +1000</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Website Update</title>
+        <description>&lt;p&gt;Update of the main website to follow a set theme&lt;/p&gt;
+</description>
+        <pubDate>Tue, 30 Jun 2015 12:50:00 +1000</pubDate>
+        <link>http://Cethric.github.io//HTMLEditor-Pythonista//2015/06/30/website-update.html</link>
+        <guid isPermaLink="true">http://Cethric.github.io//HTMLEditor-Pythonista//2015/06/30/website-update.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
