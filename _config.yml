@@ -41,7 +41,7 @@ excerpt_separator: "\n\n"
 
 # Serving
 detach:  false
-port:    4100
+port:    4200
 host:    127.0.0.1
 baseurl: "/XGE/" # does not include hostname
 url: "http://Cethric.github.io/"

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HTMLEditor Pythonista</title>
+    <title>XGE</title>
     <description>Yet to write a description
 </description>
-    <link>http://Cethric.github.io//HTMLEditor-Pythonista//</link>
-    <atom:link href="http://Cethric.github.io//HTMLEditor-Pythonista//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 30 Jun 2015 16:29:53 +1000</pubDate>
-    <lastBuildDate>Tue, 30 Jun 2015 16:29:53 +1000</lastBuildDate>
+    <link>http://Cethric.github.io//XGE//</link>
+    <atom:link href="http://Cethric.github.io//XGE//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 30 Jun 2015 16:30:14 +1000</pubDate>
+    <lastBuildDate>Tue, 30 Jun 2015 16:30:14 +1000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -15,8 +15,8 @@
         <description>&lt;p&gt;Update of the main website to follow a set theme&lt;/p&gt;
 </description>
         <pubDate>Tue, 30 Jun 2015 12:50:00 +1000</pubDate>
-        <link>http://Cethric.github.io//HTMLEditor-Pythonista//2015/06/30/website-update.html</link>
-        <guid isPermaLink="true">http://Cethric.github.io//HTMLEditor-Pythonista//2015/06/30/website-update.html</guid>
+        <link>http://Cethric.github.io//XGE//2015/06/30/website-update.html</link>
+        <guid isPermaLink="true">http://Cethric.github.io//XGE//2015/06/30/website-update.html</guid>
         
         
       </item>
