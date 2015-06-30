@@ -1,51 +1,48 @@
 ---
 layout: default
-title: HTMLEditor
+title: XGE
 permalink: /
 ---
 
-# HTMLEditor-Pythonista
-A basic html editor for the pythonista app
-[![Travis.CI-BuildStatus](https://travis-ci.org/Cethric/HTMLEditor-
-Pythonista.svg?branch=master)](https://travis-ci.org/Cethric/HTMLEditor-
-Pythonista/builds)
+# XGE
+This is a experimental game engine written in java.
+It uses LWJGL v3 for the back end
+I am in no way a great coder and any/all help and feedback is well appreciated
 
-[Get Tar.GZ](https://github.com/Cethric/HTMLEditor-Pythonista/tarball/master)
-[Get Zip](https://github.com/Cethric/HTMLEditor-Pythonista/zipball/master)
-[View on GitHub](https://github.com/Cethric/HTMLEditor-Pythonista)
+###Things todo:
+* [WIP] Work in Progress
+* [NYI] Not Yet Implimented
+* [???] Still thinking about it
+* [COM] Completed
 
-This is a complete rewrite of the code paying attention to the suggestions
-and improvements by cclauss
+#### Where I'm at
++ [COM] Initial design
++ [COM] OpenGL Version 4.1 Core support
++ [WIP] Scengraphish sort of design
++ [WIP] Scene XML file, save and load
++ [WIP] Bullet Physics support
++ [WIP] Shader support
++ [NYI] Lighting
++ [WIP] Texture support
++ [WIP] ~~Model import, maybe a completely separate project?~~ Using
+jAssimp to manage this.
++ [???] Documentation, most of my code is documented however there is no
+proper documentation yet.
 
-### Features to include
-+ [ ] Builtin Customizable lan server
-+ [x] ~~Code checker for html, css and js (HTML, JS, CSS are done)~~ this is
-done by ~~ACE~~ CodeMirror
-+ [x] ~~Builtin page previewer~~ Finished for HTML only
-+ [ ] Dropbox, Onedrive, GoogleDrive, FPT and other cloud based file
-management services to be incoorperated.
-+ [x] Ability to save to zipfile
-+ [ ] Send webfiles from iDevice to a computer (possibly as a zip and
-intergrated HTTP server).
+###More Info
+I do not know where I am going with this project as of yet but I hope something
+great can come of it.
 
-### TODO
-+ [ ] Code clean up
-+ [ ] Work on the server side (Thank you [Gerzer](https://github.com/Gerzer))
-+ [ ] Make the editor a litle but more reliable
+~~For those who wish to run it, compile the code, and run
+./src/cethric/xge/editor/Editor.class for an example on how to use the engine.~~
 
-### HTML Editor Features
-+ ~~HTML tag completions~~ CodeMirror might not do this...
-+ HTML quick previewer
-+ ~~HTML code checking~~ CodeMirror might not do this...
-+ Syntax Highlighter - Done Through ~~ACE~~ CodeMirror
-
-
-### Server Editor Features
-+ Yet to be done.
+If you are using IntelliJ Idea select the appropriate platform "Editor"
+(for OSX) or "Editor Windows" (for Windows)
 
 
-### KNOWN BUGS
-+ ~~Opening a file usually doesn't work, the file gets overwritten before display causing major issues (issue #12)~~
-+ ~~The close button sometimes hangs requiring an app restart (issue #13)~~
-+ ~~Opening a file disables the ui.Webview (issue [#18](https://github.com/Cethric/HTMLEditor-Pythonista/issues/18))~~
-+ Adding a tag through the tag insert system may overwrite all of the open files (issue [#24](https://github.com/Cethric/HTMLEditor-Pythonista/issues/24))
+
+
+
+
+####This is a experimental game engine and should not be used for major projects.
+####USE AT YOUR OWN RISK.
