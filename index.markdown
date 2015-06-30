@@ -5,9 +5,14 @@ permalink: /
 ---
 
 # XGE
+[Get Tar.GZ](https://github.com/Cethric/XGE/tarball/master)
+[Get Zip](https://github.com/Cethric/XGE/zipball/master)
+[View on GitHub](https://github.com/Cethric/XGE)
+
 This is a experimental game engine written in java.
 It uses LWJGL v3 for the back end
-I am in no way a great coder and any/all help and feedback is well appreciated
+I am in no way a great coder and any/all help and feedback is well
+appreciated
 
 ###Things todo:
 * [WIP] Work in Progress
@@ -30,11 +35,13 @@ jAssimp to manage this.
 proper documentation yet.
 
 ###More Info
-I do not know where I am going with this project as of yet but I hope something
+I do not know where I am going with this project as of yet but I hope
+something
 great can come of it.
 
 ~~For those who wish to run it, compile the code, and run
-./src/cethric/xge/editor/Editor.class for an example on how to use the engine.~~
+./src/cethric/xge/editor/Editor.class for an example on how to use the
+engine.~~
 
 If you are using IntelliJ Idea select the appropriate platform "Editor"
 (for OSX) or "Editor Windows" (for Windows)
@@ -44,6 +51,7 @@ If you are using IntelliJ Idea select the appropriate platform "Editor"
 
 
 
-####This is a experimental game engine and should not be used for major projects.
+####This is a experimental game engine and should not be used for major
+projects.
 ####USE AT YOUR OWN RISK.
 ###THIS PROJECT IS DEAD UNTIL FURTHER NOTICE
