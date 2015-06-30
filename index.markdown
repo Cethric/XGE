@@ -5,21 +5,28 @@ permalink: /
 ---
 
 # HTMLEditor-Pythonista
-A basic html editor for the pythonista app [![Travis.CI-BuildStatus](https://travis-ci.org/Cethric/HTMLEditor-Pythonista.svg?branch=master)](https://travis-ci.org/Cethric/HTMLEditor-Pythonista/builds)
+A basic html editor for the pythonista app
+[![Travis.CI-BuildStatus](https://travis-ci.org/Cethric/HTMLEditor-
+Pythonista.svg?branch=master)](https://travis-ci.org/Cethric/HTMLEditor-
+Pythonista/builds)
 
 [Get Tar.GZ](https://github.com/Cethric/HTMLEditor-Pythonista/tarball/master)
 [Get Zip](https://github.com/Cethric/HTMLEditor-Pythonista/zipball/master)
 [View on GitHub](https://github.com/Cethric/HTMLEditor-Pythonista)
 
-This is a complete rewrite of the code paying attention to the suggestions and improvements by cclauss
+This is a complete rewrite of the code paying attention to the suggestions
+and improvements by cclauss
 
 ### Features to include
 + [ ] Builtin Customizable lan server
-+ [x] ~~Code checker for html, css and js (HTML, JS, CSS are done)~~ this is done by ~~ACE~~ CodeMirror
++ [x] ~~Code checker for html, css and js (HTML, JS, CSS are done)~~ this is
+done by ~~ACE~~ CodeMirror
 + [x] ~~Builtin page previewer~~ Finished for HTML only
-+ [ ] Dropbox, Onedrive, GoogleDrive, FPT and other cloud based file management services to be incoorperated.
++ [ ] Dropbox, Onedrive, GoogleDrive, FPT and other cloud based file
+management services to be incoorperated.
 + [x] Ability to save to zipfile
-+ [ ] Send webfiles from iDevice to a computer (possibly as a zip and intergrated HTTP server).
++ [ ] Send webfiles from iDevice to a computer (possibly as a zip and
+intergrated HTTP server).
 
 ### TODO
 + [ ] Code clean up
